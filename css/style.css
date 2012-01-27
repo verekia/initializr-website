@@ -332,6 +332,18 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
     INTERMEDIATE: Menu
    ==================== */
 
+	#header-container{
+		-webkit-box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
+		   -moz-box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
+		        box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
+	}
+
+	#title,
+	#header-container h2,
+	#follow-container p{
+		text-shadow:0 -2px 2px rgba(0, 0, 0, 0.1);
+	}
+
 	#title-container{
 		float:left;
 		width:50%;
@@ -372,7 +384,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	#badges{
 		float:right;
 		margin-top:10px;
-		line-height:20px;
+		line-height:18px;
+		font-size:14px;
 		color:white;
 		font-weight:bold;
 		font-style:italic;
@@ -400,7 +413,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	}
 	
 	.badge-label{
-		margin-top:22px;
+		margin-top:26px;
 	}
 	
 	#badges ul{
