@@ -203,6 +203,17 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('fonts/Chunkfive-webfont.eot');
+    src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chunkfive-webfont.woff') format('woff'),
+         url('fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 
@@ -223,7 +234,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
     ALL: Orange Theme
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
+#header-container{ border-bottom: 13px solid #e44d26; }
 #footer-container{ border-top:    20px solid #e44d26; }
 #main aside      { border-top:    20px solid #e44d26; }
 
@@ -233,35 +244,39 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#f16529;
 }
 
-#title{ color:white; }
+#title{
+	color:white;
+	font-family:'ChunkFive';
+	font-weight:normal;
+	font-size:4em;
+	margin-bottom:20px;
+}
+
+#header-container h2{
+	color:white;
+	font-size:16px;
+}
 
 ::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
 ::selection      { background: #f16529; color: #fff; text-shadow: none; }
 
-/* ==============
-    MOBILE: Menu
-   ============== */
 
-nav a{
-	display:block;
-	margin-bottom:10px;
-	padding:15px 0;
 
-	background:#e44d26;
-	color:white;
+/* WEBSITE */
 
-	text-align:center;
-	text-decoration:none;
-	font-weight:bold;
+#header-container header{
+	height:133px;
 }
 
-nav a:hover, nav a:visited{
-	color:white;
+
+#html5-logo-container{
+	display:none;
 }
 
-nav a:hover{
-	text-decoration:underline;
-}
+	#follow-container{
+		display:none;
+	}
+
 
 /* ==============
     MOBILE: Main
@@ -271,19 +286,6 @@ nav a:hover{
 	padding:30px 0;
 }
 
-#main article h1{
-	font-size:2em;
-}
-
-#main aside{
-	color:white;
-	padding:0px 5% 10px;
-}
-
-#footer-container footer{
-	color:white;
-	padding:20px 0;
-}
 
 /* ===============
     ALL: IE Fixes
@@ -329,69 +331,124 @@ nav a:hover{
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
-	
-	nav a{
-		float:left;
-		width:27%;
-		margin:0 1.7%;
-		padding:25px 2%;
-		margin-bottom:0;
-	}
-	
-	nav li:first-child a{ margin-left:0;  }
-	nav li:last-child  a{ margin-right:0; }
-	
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
 
-	nav ul li{
-		display:inline;
-	}	
-	.oldie nav a{
-		margin:0 0.7%;		
+	#title-container{
+		float:left;
+		width:50%;
 	}
+	
+	#html5-logo-container{
+		float:left;
+		width:0;
+	}
+
+	#follow-iframes-container{
+		width:260px;
+		float:right;
+	}
+
+	#follow-container{
+		float:right;
+		width:50%;
+		display:block;
+	}
+
+	#follow-container p{
+		text-align:right;
+		color:white;
+		font-weight:bold;
+		margin:12px 0;
+	}
+	
+	#follow-container a{
+		color:white;
+	}
+
+	#intro p{
+/* 		float:left; */
+	margin-right:265px;
+	}
+
+	#badges{
+		float:right;
+		margin-top:10px;
+		line-height:20px;
+		color:white;
+		font-weight:bold;
+		font-style:italic;
+		margin-left:20px;
+	}
+	
+	#badges li{
+		float:left;
+		background:#eee;
+		color:#444;
+		text-align:center;
+		width:85px;
+		height:85px;
+/* 		border:10px solid #E44D26; */
+		-webkit-border-radius:999px;
+		   -moz-border-radius:999px;
+		        border-radius:999px;
+		margin-left:5px;
+		text-shadow:0 2px 1px white;
+		box-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+	}
+	
+	#badges li:first-child{
+		margin-left:0;
+	}
+	
+	.badge-label{
+		margin-top:22px;
+	}
+	
+	#badges ul{
+		float:right;
+		margin:0;
+		list-style-type:none;
+		padding:0;
+	}
+
 }
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-	#header-container,
-	#main aside{
-		-webkit-box-shadow:0 5px 10px #aaa;
-		   -moz-box-shadow:0 5px 10px #aaa;
-		        box-shadow:0 5px 10px #aaa;
+	#title-container{
+		float:left;
+		width:40%;
 	}
-
-/* ============
-    WIDE: Menu
-   ============ */
 	
-	#title{
+	#html5-logo-container{
+		display:block;
 		float:left;
+		width:20%;
 	}
 
-	nav{
+	#html5-logo-container img{
+		display:block;
+		margin:auto;
+	}
+	
+
+	#follow-iframes-container{
+		width:260px;
 		float:right;
-		width:38%;
 	}
 
-/* ============
-    WIDE: Main
-   ============ */
-
-	#main article{
-		float:left;
-		width:57%;
-	}
-		
-	#main aside{
+	#follow-container{
 		float:right;
-		width:28%;
+		width:40%;
 	}
+	
+	#intro p{
+/* 		width:56%; */
+	}
+
+	#intro #badges{
+/* 		width:44%; */
+	}
+
 }
 
 @media only screen and (min-width: 1140px) {
