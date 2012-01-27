@@ -314,6 +314,70 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	float:right;
 }
 
+.download-block{
+	float:left;
+	width:32%;
+/* 	height:120px; */
+	background:silver;
+	margin-right:2%;
+}
+
+.download-block:last-child{
+	margin-right:0;
+}
+
+.blank-background{
+	background:#bbb;
+}
+
+.blank-background:hover{
+	background:#c4c4c4;
+}
+
+
+
+.initializr-background{
+	background:#F16529;
+}
+
+.initializr-background:hover{
+	background:#F67539;
+}
+
+.bootstrap-background{
+	background:#6090ff;
+}
+.bootstrap-background:hover{
+	background:#78a0ff;
+}
+
+
+
+#download-section h3{
+	font-weight:normal;
+	font-family:ChunkFive;
+	font-size:2.5em;
+	color:white;
+	margin:0;
+	text-align:center;
+	text-shadow:0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#download-section a{
+	display:block;
+	width:100%;
+	padding:45px 0;
+	color:white;
+	text-decoration:none;
+}
+
+/* #download-section .blank-background h3{ */
+/* 	text-shadow: */
+/* 	-1px -1px 1px rgba(0, 0, 0, 0.4), */
+/* 	1px 1px 1px rgba(0, 0, 0, 0.4); */
+/* } */
+
+
 /* ==============
     MOBILE: Main
    ============== */
