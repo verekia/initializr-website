@@ -214,7 +214,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 .download-block{
 	background:silver;
-	margin-right:2%;
 }
 
 .blank-background{
@@ -422,11 +421,13 @@ display:block;
 
 	.download-block{
 		float:left;
-		width:40%;
+		width:50%;
+		margin:0;
 	}
 
 	.download-block:last-child{
-		margin-right:0;
+		margin:auto;
+		float:none;
 	}
 
 
@@ -499,6 +500,12 @@ display:block;
 
 	.download-block{
 		width:32%;
+		margin-right:2%;
+	}
+
+	.download-block:last-child{
+		margin:0;
+		float:left;
 	}
 
 	.customize-section{
