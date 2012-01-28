@@ -217,10 +217,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	margin-right:2%;
 }
 
-.download-block:last-child{
-	margin-right:0;
-}
-
 .blank-background{
 	background:#bbb;
 }
@@ -428,6 +424,11 @@ display:block;
 		float:left;
 		width:40%;
 	}
+
+	.download-block:last-child{
+		margin-right:0;
+	}
+
 
 	.customize-section{
 		float:left;
