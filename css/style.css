@@ -116,6 +116,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	font-size:16px;
 }
 
+#header-container header{
+	text-align:center;
+}
+
 ::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
 ::selection      { background: #f16529; color: #fff; text-shadow: none; }
 
@@ -135,6 +139,51 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 #follow-container{
 	display:none;
 }
+
+
+	#badges{
+		margin:0 auto;
+		width:265px;
+		margin-top:10px;
+		line-height:18px;
+		font-size:14px;
+		color:white;
+		font-weight:bold;
+		font-style:italic;
+		
+	}
+	
+	#badges li{
+		float:left;
+		background:#eee;
+		color:#444;
+		text-align:center;
+		width:85px;
+		height:85px;
+/* 		border:10px solid #E44D26; */
+		-webkit-border-radius:999px;
+		   -moz-border-radius:999px;
+		        border-radius:999px;
+		margin-left:5px;
+		text-shadow:0 2px 1px white;
+		box-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+	}
+	
+	#badges li:first-child{
+		margin-left:0;
+	}
+	
+	.badge-label{
+		margin-top:26px;
+	}
+	
+	#badges ul{
+		float:right;
+		margin:0;
+		list-style-type:none;
+		padding:0;
+	}
+
 
 .separator{
 	font-family:LeagueGothicRegular;
@@ -164,9 +213,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 .download-block{
-	float:left;
-	width:32%;
-/* 	height:120px; */
 	background:silver;
 	margin-right:2%;
 }
@@ -312,6 +358,10 @@ display:block;
 		        box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
 	}
 
+	#header-container header{
+		text-align:left;
+	}
+
 	#title,
 	#header-container h2,
 	#follow-container p{
@@ -320,7 +370,7 @@ display:block;
 
 	#title-container{
 		float:left;
-		width:50%;
+		width:63%;
 	}
 	
 	#html5-logo-container{
@@ -333,9 +383,17 @@ display:block;
 		float:right;
 	}
 
+	#follow-iframes-container iframe{
+		float:right;
+		width:146px!important;
+		margin-bottom:6px;
+	}
+
+	
+
 	#follow-container{
 		float:right;
-		width:50%;
+		width:37%;
 		display:block;
 	}
 
@@ -346,55 +404,19 @@ display:block;
 		margin:12px 0;
 	}
 	
+
+	
 	#follow-container a{
 		color:white;
 	}
 
 	#intro p{
 /* 		float:left; */
-	margin-right:265px;
+	margin-right:285px;
 	}
 
 	#badges{
 		float:right;
-		margin-top:10px;
-		line-height:18px;
-		font-size:14px;
-		color:white;
-		font-weight:bold;
-		font-style:italic;
-		margin-left:20px;
-	}
-	
-	#badges li{
-		float:left;
-		background:#eee;
-		color:#444;
-		text-align:center;
-		width:85px;
-		height:85px;
-/* 		border:10px solid #E44D26; */
-		-webkit-border-radius:999px;
-		   -moz-border-radius:999px;
-		        border-radius:999px;
-		margin-left:5px;
-		text-shadow:0 2px 1px white;
-		box-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
-	}
-	
-	#badges li:first-child{
-		margin-left:0;
-	}
-	
-	.badge-label{
-		margin-top:26px;
-	}
-	
-	#badges ul{
-		float:right;
-		margin:0;
-		list-style-type:none;
-		padding:0;
 	}
 
 	.separator:before,
@@ -402,6 +424,10 @@ display:block;
 		width:30%;
 	}
 
+	.download-block{
+		float:left;
+		width:40%;
+	}
 
 	.customize-section{
 		float:left;
@@ -447,6 +473,16 @@ display:block;
 		width:40%;
 	}
 	
+	#follow-container p:before{
+		content:"Initialized by ";
+	}
+	
+	#follow-iframes-container iframe{
+/* 		float:right; */
+		width:auto!important;
+		margin-bottom:6px;
+	}
+	
 	#intro p{
 /* 		width:56%; */
 	}
@@ -458,6 +494,10 @@ display:block;
 	.separator:before,
 	.separator:after{
 		width:35%;
+	}
+
+	.download-block{
+		width:32%;
 	}
 
 	.customize-section{
