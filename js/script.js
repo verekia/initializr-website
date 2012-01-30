@@ -1,6 +1,62 @@
 $(function(){
 
-		
+	/************
+	    CONFIG
+	 ************/
+	var config = {
+		/* allModules:[
+		            'h5bp-content',
+		            'izr-responsive',
+		            'boot-responsive',
+		            'modernizr',
+		            'html5shiv',
+		            'respond',
+		            'h5bp-htaccess',
+		            'h5bp-nginx',
+		            'h5bp-webconfig',
+		            'jquerymin',
+		            'jquerydev',
+		            'h5bp-chromeframe',
+		            'h5bp-analytics',
+		            'izr-applemediaqueries',
+		            'less',
+		            'h5bp-build',
+		            'h5bp-iecond',
+		            'h5bp-coloredselection',
+		            'h5bp-favicon',
+		            'h5bp-appletouchicons',
+		            'h5bp-scripts',
+		            'h5bp-robots',
+		            'h5bp-humans',
+		            'h5bp-404',
+		            'h5bp-adobecrossdomain'
+		            ], */
+		defaultModules:{
+			blank: [
+			        'h5bp-content',
+			        'modernizr',
+			        'jquerymin',
+			        'h5bp-chromeframe',
+		            'h5bp-analytics',
+		            'h5bp-iecond',
+		            'h5bp-coloredselection',
+		            'h5bp-favicon',
+		            'h5bp-appletouchicons',
+		            'h5bp-scripts',
+		            'h5bp-robots',
+		            'h5bp-humans',
+		            'h5bp-404',
+		            'h5bp-adobecrossdomain'
+		            
+			        ],
+			initializr: [
+			             'izr-responsive'
+			             ],
+			bootstrap: [
+			            'boot-responsive'
+			            ]
+		}
+	};
 	
 	/************
 	   VARIABLES
@@ -19,31 +75,27 @@ $(function(){
 
 	
 	$('#preconfig-blank').click(function(){
-		preconfigBlank();
+		fillDefaultModules('blank');
 	});
 
 	$('#preconfig-initializr').click(function(){
-		preconfigInitializr();
+		fillDefaultModules('initializr');
 	});
 	
 	$('#preconfig-bootstrap').click(function(){
-		preconfigBootstrap();
+		fillDefaultModules('bootstrap');
 	});
 	
 	/*********
 	   LOGIC
 	 *********/
 	
-	function preconfigBlank(){
-		alert('blank');
-	}
-	
-	function preconfigInitializr(){
-		alert('izr');
-	}
-	
-	function preconfigBootstrap(){
-		alert('bootstrap');
+	function fillDefaultModules(type){
+		$('input').attr('checked', false);
+		for (var i = 0, curModule; curModule = config.defaultModules[type][i++];){
+			$('input[value=' + curModule +']').attr('checked', true);
+		};
+		update();
 	}
 	
 	function update(){
