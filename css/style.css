@@ -191,6 +191,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	font-weight:normal;
 	font-size:3em;
 	color:#F16529;
+	margin:50px 0;
 }
 
 .separator:before,
@@ -201,6 +202,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#eee;
 	content:"";
 	margin-top:14px;
+	display:none;
 }
 
 
@@ -212,8 +214,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	float:right;
 }
 
-.download-block{
-	background:silver;
+#fine-tuning-separator{
+	margin:60px 0 20px;
 }
 
 .blank-background{
@@ -241,27 +243,25 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#78a0ff;
 }
 
+.preconfig-block{
+	border:none;
+	display:block;
+	width:100%;
+}
 
-
-#download-section h3{
+#preconfig-section h3{
 	font-weight:normal;
 	font-family:ChunkFive;
-	font-size:2.5em;
+	font-size:2em;
 	color:white;
 	margin:0;
 	text-align:center;
+	padding:25px 0;
 	text-shadow:0 -2px 2px rgba(0, 0, 0, 0.1);
-}
-
-#download-section a{
-	display:block;
-	width:100%;
-	padding:45px 0;
 	color:white;
-	text-decoration:none;
 }
 
-/* #download-section .blank-background h3{ */
+/* #preconfig-section .blank-background h3{ */
 /* 	text-shadow: */
 /* 	-1px -1px 1px rgba(0, 0, 0, 0.4), */
 /* 	1px 1px 1px rgba(0, 0, 0, 0.4); */
@@ -341,7 +341,7 @@ textarea{
 
 /* ==|== media queries ====================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 540px) {
 
 /* ====================
     INTERMEDIATE: Menu
@@ -420,16 +420,17 @@ textarea{
 
 	.separator:before,
 	.separator:after{
-		width:30%;
+		width:22%;
+		display:block;
 	}
 
-	.download-block{
+	.preconfig-block{
 		float:left;
 		width:50%;
 		margin:0;
 	}
 
-	.download-block:last-child{
+	.preconfig-block:last-child{
 		margin:auto;
 		float:none;
 	}
@@ -450,7 +451,7 @@ textarea{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 860px) {
 
 	#title-container{
 		float:left;
@@ -499,15 +500,15 @@ textarea{
 
 	.separator:before,
 	.separator:after{
-		width:35%;
+		width:32%;
 	}
 
-	.download-block{
+	.preconfig-block{
 		width:32%;
 		margin-right:2%;
 	}
 
-	.download-block:last-child{
+	.preconfig-block:last-child{
 		margin:0;
 		float:left;
 	}

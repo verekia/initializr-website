@@ -18,9 +18,33 @@ $(function(){
 	});
 
 	
+	$('#preconfig-blank').click(function(){
+		preconfigBlank();
+	});
+
+	$('#preconfig-initializr').click(function(){
+		preconfigInitializr();
+	});
+	
+	$('#preconfig-bootstrap').click(function(){
+		preconfigBootstrap();
+	});
+	
 	/*********
 	   LOGIC
 	 *********/
+	
+	function preconfigBlank(){
+		alert('blank');
+	}
+	
+	function preconfigInitializr(){
+		alert('izr');
+	}
+	
+	function preconfigBootstrap(){
+		alert('bootstrap');
+	}
 	
 	function update(){
 		updateModules();

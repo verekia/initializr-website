@@ -52,35 +52,35 @@
 				</p>
 			</div>
 			<h2 class="separator">
-				Download
+				1 - Pre-configuration
 			</h2>
-			<div id="download-section" class="clearfix">
-				<div class="download-block blank-background clearfix">
-					<h3><a href="#">Blank H5BP</a></h3>
-				</div>
-				<div class="download-block initializr-background clearfix">
-					<h3><a href="#">Responsive</a></h3>
-				</div>
-				<div class="download-block bootstrap-background clearfix">
-					<h3><a href="#">Bootstrap 2</a></h3>
-				</div>
+			<div id="preconfig-section" class="clearfix">
+				<button id="preconfig-blank" class="preconfig-block blank-background clearfix">
+					<h3>Classic H5BP</h3>
+				</button>
+				<button id="preconfig-initializr" class="preconfig-block initializr-background clearfix">
+					<h3>Responsive</h3>
+				</button>
+				<button id="preconfig-bootstrap" class="preconfig-block bootstrap-background clearfix">
+					<h3>Bootstrap 2</h3>
+				</button>
 			</div>
-			<h2 class="separator">
-				Customize
+			<h2 id="fine-tuning-separator"class="separator">
+				2 - Fine tuning
 			</h2>
 			<div id="customize-section" class="clearfix">
 			
 				<div class="customize-section">
 					<h3>HTML/CSS Template</h3>
 					<label><input type="radio" name="htmlcss" value="h5bp-content">Blank</label>
-					<label><input type="radio" name="htmlcss" value="izr-responsive">Responsive</label>
+					<label><input type="radio" name="htmlcss" value="izr-responsive" checked>Responsive</label>
 					<label><input type="radio" name="htmlcss" value="izr-bootstrap-responsive">Bootstrap</label>
 				</div>
 				<div class="customize-section">
 					<h3>HTML5 Polyfills</h3>
-					<label><input type="radio" name="polyfill" value="modernizr">Modernizr</label>
+					<label><input type="radio" name="polyfill" value="modernizr" checked>Modernizr</label>
 					<label><input type="radio" name="polyfill" value="html5shiv">HTML5shiv</label>
-					<label><input type="checkbox" value="respond">Respond</label>
+					<label><input type="checkbox" value="respond" checked>Respond</label>
 				</div>
 				<div class="customize-section">
 					<h3>Server Config</h3>
@@ -90,29 +90,29 @@
 				</div>
 				<div class="customize-section">
 					<h3>jQuery</h3>
-					<label><input type="checkbox" value="jquerymin">Minified</label>
+					<label><input type="checkbox" value="jquerymin" checked>Minified</label>
 					<label><input type="checkbox" value="jquerydev">Development</label>
 				</div>
 				<div class="customize-section">
 					<h3>Google Services</h3>
-					<label><input type="checkbox" value="h5bp-chromeframe">Chrome Frame</label>
-					<label><input type="checkbox" value="h5bp-analytics">Analytics</label>
+					<label><input type="checkbox" value="h5bp-chromeframe" checked>Chrome Frame</label>
+					<label><input type="checkbox" value="h5bp-analytics" checked>Analytics</label>
 				</div>
 				<div class="customize-section">
 					<h3>Extra</h3>
-					<label><input type="checkbox" value="izr-applemediaqueries">iPhone/iPad M. Queries</label>
+					<label><input type="checkbox" value="izr-applemediaqueries" checked>iPhone/iPad M. Queries</label>
 					<label><input type="checkbox" value="less">Include LESS</label>
 				</div>
 				
 				<div class="customize-section">
 					<h3>H5BP Optional</h3>
 					<label><input type="checkbox" value="h5bp-build">Build Tool</label>
-					<label><input type="checkbox" value="h5bp-iecond">IE Classes</label>
-					<label><input type="checkbox" value="h5bp-coloredselection">Colored Selections</label>
-					<label><input type="checkbox" value="h5bp-favicon">Favicon</label>
+					<label><input type="checkbox" value="h5bp-iecond" checked>IE Classes</label>
+					<label><input type="checkbox" value="h5bp-coloredselection" checked>Colored Selections</label>
+					<label><input type="checkbox" value="h5bp-favicon" checked>Favicon</label>
 				</div>
 				<div class="customize-section customize-h5bp-no-title customize-h5bp-no-title-middle">
-					<label><input type="checkbox" value="h5bp-appletouchicons">Apple Touch Icons</label>
+					<label><input type="checkbox" value="h5bp-appletouchicons" checked>Apple Touch Icons</label>
 					<label><input type="checkbox" value="h5bp-scripts">JS Plugins</label>
 					<label><input type="checkbox" value="h5bp-robots">Robots.txt</label>
 				</div>
@@ -126,6 +126,10 @@
 			
 			<textarea id="download-url"></textarea><br />
 			<textarea id="preview-url"></textarea>
+
+			<h2 class="separator">
+				3 - Get the stuff
+			</h2>
 			
 			
 		</div> <!-- #main -->
