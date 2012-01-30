@@ -297,6 +297,10 @@ display:block;
 	font-size:2em;
 }
 
+textarea{
+	display:block;
+	width:700px;
+}
 
 /* ===============
     ALL: IE Fixes
