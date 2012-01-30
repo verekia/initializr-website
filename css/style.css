@@ -232,7 +232,8 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#F16529;
 }
 
-.initializr-background:hover{
+.initializr-background:hover,
+#download-section a:hover{
 	background:#F67539;
 }
 
@@ -249,7 +250,9 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	width:100%;
 }
 
-#preconfig-section h3{
+#preconfig-section h3,
+#download-section a
+{
 	font-weight:normal;
 	font-family:ChunkFive;
 	font-size:2em;
@@ -302,6 +305,39 @@ textarea{
 	width:700px;
 }
 
+#download-section{
+	margin-top:50px;
+}
+
+#download-section a{
+	background:#F16529;
+	display:block;
+	text-decoration:none;
+	margin-bottom:20px;
+}
+
+
+#about-container{
+	background:#eee;
+	padding:30px 0;
+}
+
+#about-container h3{
+	font-weight:normal;
+	font-family:LeagueGothicRegular;
+	font-size:2em;
+}
+
+#about-container a{
+	color:#E44D26;
+/* 	font-weight:bold; */
+	text-decoration:none;
+}
+
+#email:before{
+	content:"initializr@gmail.com";
+}
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -346,10 +382,6 @@ textarea{
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
-
-	body{
-		padding-bottom:100px;
-	}
 
 	#header-container{
 		-webkit-box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
@@ -449,6 +481,44 @@ textarea{
 		margin-top:89px;
 	}
 
+	#download-section a{
+		float:left;
+		width:48%;
+	}
+	
+	#download-section a:first-child{
+		margin-right:4%;
+	}
+	
+	#about-container{
+		-webkit-box-shadow:	inset 0 10px 15px rgba(0, 0, 0, 0.1);
+		   -moz-box-shadow:	inset 0 10px 15px rgba(0, 0, 0, 0.1);
+		        box-shadow:	inset 0 10px 15px rgba(0, 0, 0, 0.1);
+	
+	}
+
+	#about-container article{
+		width:100%;
+	}
+
+	#github-container{
+		margin:auto;
+		width:500px;
+	}
+
+	#github-container img{
+		float:left;
+	}
+	
+	#github-repositories{
+		float:right;
+		margin-top:20px;
+	}
+	
+	#github-repositories h3{
+		text-align:center;
+	}
+
 }
 
 @media only screen and (min-width: 860px) {
@@ -528,6 +598,29 @@ textarea{
 	.customize-h5bp-no-title{
 		margin-top:89px;
 	}
+
+	#about-container article{
+		width:530px;
+	}
+
+	#github-container{
+		float:right;
+	}
+
+	#github-container img{
+		float:none;
+		margin:0;
+	}
+	
+	#github-repositories{
+		float:none;
+		margin:0;
+	}
+
+	#github-container{
+		width:auto;
+	}
+
 
 }
 

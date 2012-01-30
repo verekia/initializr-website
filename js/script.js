@@ -55,7 +55,8 @@ $(function(){
 			bootstrap: [
 			            'boot-responsive'
 			            ]
-		}
+		},
+		baseUrl:'http://localhost:8888/builder?'
 	};
 	
 	/************
@@ -138,8 +139,11 @@ $(function(){
 		
 		params = params.substring(0, params.length - 1);
 
-		$('#preview-url').val('/builder?print&' + params);
-		$('#download-url').val('/builder?' + params);	
+		$('#preview-url').val(config.baseUrl + 'print&' + params);
+		$('#download-url').val(config.baseUrl + params);	
+		
+		$('#preview-link').attr('href', config.baseUrl + 'print&' + params);
+		$('#download-link').attr('href', config.baseUrl + params);	
 	}	
 
 	/***********
