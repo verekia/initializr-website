@@ -42,6 +42,14 @@ $(function(){
 			modules.remove('jquerydev');
 			modules.push('jquery');
 		}
+
+		if (modules.indexOf('modernizr') != -1 && modules.indexOf('respond') != -1){
+			modules.remove('modernizr');
+			modules.remove('respond');
+			modules.push('modernizrrespond');
+		}
+		
+		
 	}
 	
 	function updateUrls(){
