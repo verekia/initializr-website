@@ -334,6 +334,11 @@ textarea{
 	text-decoration:none;
 }
 
+#github-container img{
+	display:none;
+}
+
+
 #email:before{
 	content:"initializr@gmail.com";
 }
@@ -508,6 +513,7 @@ textarea{
 
 	#github-container img{
 		float:left;
+		display:block;
 	}
 	
 	#github-repositories{
