@@ -596,7 +596,8 @@ textarea{
 		margin-right:2%;
 	}
 
-	.ie8 .preconfig-block{
+	.ie8 .preconfig-block,
+	.ie7 .preconfig-block{
 		width:31.33%;
 	}
 
