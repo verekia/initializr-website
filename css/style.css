@@ -446,6 +446,12 @@ textarea{
 		text-align:left;
 		height:133px;
 	}
+	
+	
+	.ie7 #header-container header,
+	.ie8 #header-container header{
+		height:auto;
+	}
 
 	#title,
 	#header-container h2,
@@ -605,7 +611,6 @@ textarea{
 		display:block;
 		margin:auto;
 	}
-	
 
 	#follow-iframes-container{
 		width:260px;
@@ -655,8 +660,8 @@ textarea{
 	.preconfig-block{
 	}
 
-	.ie8 .preconfig-block,
-	.ie7 .preconfig-block{
+	.ie8 .preconfig-container,
+	.ie7 .preconfig-container{
 		width:31.33%;
 	}
 
