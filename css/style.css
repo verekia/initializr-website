@@ -210,32 +210,40 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 }
 
 #fine-tuning-separator{
-	margin:60px 0 20px;
+	margin:40px 0 20px;
 }
 
-.blank-background{
+.blank-background button,
+.blank-background a{
 	background:#bbb;
 }
 
-.blank-background:hover{
+.blank-background button:hover,
+.blank-background a:hover{
 	background:#c4c4c4;
 }
 
 
 
-.initializr-background{
+.initializr-background button,
+.initializr-background a,
+#download-section a{
 	background:#F16529;
 }
 
-.initializr-background:hover,
+.initializr-background button:hover,
+.initializr-background a:hover,
 #download-section a:hover{
 	background:#F67539;
 }
 
-.bootstrap-background{
+.bootstrap-background button,
+.bootstrap-background a{
 	background:#6090ff;
 }
-.bootstrap-background:hover{
+
+.bootstrap-background button:hover,
+.bootstrap-background a:hover{
 	background:#78a0ff;
 }
 
@@ -258,6 +266,29 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	text-shadow:0 -2px 2px rgba(0, 0, 0, 0.1);
 	color:white;
 }
+
+.preconfig-links-container{
+	width:100px;
+	margin:6px auto;
+}
+
+#preconfig-section a{
+	padding:4px;
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	margin:0px;
+	-webkit-border-radius:0 3px 3px 0;
+	   -moz-border-radius:0 3px 3px 0;
+	        border-radius:0 3px 3px 0;
+}
+
+#preconfig-section a.first{
+	-webkit-border-radius:3px 0 0 3px;
+	   -moz-border-radius:3px 0 0 3px;
+	        border-radius:3px 0 0 3px;
+}
+
 
 #main{
 	padding:30px 0;
@@ -461,13 +492,16 @@ textarea{
 		display:block;
 	}
 
-	.preconfig-block{
+	.preconfig-container{
 		float:left;
 		width:50%;
 		margin:0;
 	}
 
-	.preconfig-block:last-child{
+	.preconfig-block{
+	}
+
+	.preconfig-container:last-child{
 		margin:auto;
 		float:none;
 	}
@@ -585,9 +619,12 @@ textarea{
 		width:32%;
 	}
 
-	.preconfig-block{
+	.preconfig-container{
 		width:32%;
 		margin-right:2%;
+	}
+
+	.preconfig-block{
 	}
 
 	.ie8 .preconfig-block,
@@ -595,7 +632,7 @@ textarea{
 		width:31.33%;
 	}
 
-	.preconfig-block:last-child{
+	.preconfig-container:last-child{
 		margin:0;
 		float:left;
 	}
