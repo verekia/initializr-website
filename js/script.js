@@ -35,6 +35,7 @@ $(function(){
 			        'h5bp-content',
 			        'modernizr',
 			        'jquerymin',
+			        'h5bp-htaccess',
 			        'h5bp-chromeframe',
 		            'h5bp-analytics',
 		            'h5bp-iecond',
@@ -48,10 +49,28 @@ $(function(){
 		            
 			        ],
 			initializr: [
-			             'izr-responsive'
+			             'izr-responsive',
+			             'modernizr',
+			             'respond',
+			             'jquerymin',
+			             'h5bp-chromeframe',
+			             'h5bp-analytics',
+			             'h5bp-favicon',
+			             'h5bp-appletouchicons',
+			             'izr-applemediaqueries',
+			             'h5bp-iecond'
 			             ],
 			bootstrap: [
-			            'boot-responsive'
+			            'boot-responsive',
+			             'modernizr',
+			             'respond',
+			             'jquerymin',
+			             'h5bp-chromeframe',
+			             'h5bp-analytics',
+			             'h5bp-favicon',
+			             'h5bp-appletouchicons',
+			             'h5bp-iecond',
+			             'less'
 			            ]
 		},
 		baseUrl:'http://localhost:8888/builder?'
