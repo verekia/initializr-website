@@ -127,11 +127,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 /* WEBSITE */
 
-#header-container header{
-	height:133px;
-}
-
-
 #html5-logo-container{
 	display:none;
 }
@@ -264,13 +259,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	color:white;
 }
 
-/* #preconfig-section .blank-background h3{ */
-/* 	text-shadow: */
-/* 	-1px -1px 1px rgba(0, 0, 0, 0.4), */
-/* 	1px 1px 1px rgba(0, 0, 0, 0.4); */
-/* } */
-
-
 #main{
 	padding:30px 0;
 }
@@ -402,6 +390,7 @@ textarea{
 
 	#header-container header{
 		text-align:left;
+		height:133px;
 	}
 
 	#title,
