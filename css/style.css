@@ -524,6 +524,9 @@ textarea{
 		float:none;
 	}
 
+	#hidden-section{
+		display:none;
+	}
 
 	.customize-section{
 		float:left;
@@ -654,6 +657,7 @@ textarea{
 		margin:0;
 		float:left;
 	}
+
 
 	.first-h5bp-label{
 		visibility:hidden;

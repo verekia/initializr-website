@@ -91,10 +91,12 @@ $(function(){
 	
 	function fillDefaultModules(type){
 		$('input').attr('checked', false);
+				
 		for (var i = 0, curModule; curModule = config.defaultModules[type][i++];){
 			$('input[value=' + curModule +']').attr('checked', true);
 		};
 		update();
+		$('#hidden-section').fadeIn('slow');
 	}
 	
 	function update(){
@@ -168,6 +170,9 @@ $(function(){
 	    MAIN
 	 ***********/
 	
+	if ($('input:checked').length > 0)
+		$('#hidden-section').fadeIn(0);
 	update();
+	
 	
 });
