@@ -18,7 +18,6 @@ $(function(){
 		            'jquerydev',
 		            'h5bp-chromeframe',
 		            'h5bp-analytics',
-		            'izr-applemediaqueries',
 		            'less',
 		            'h5bp-build',
 		            'h5bp-iecond',
@@ -57,7 +56,6 @@ $(function(){
 			             'h5bp-analytics',
 			             'h5bp-favicon',
 			             'h5bp-appletouchicons',
-			             'izr-applemediaqueries',
 			             'h5bp-iecond'
 			             ],
 			bootstrap: [
