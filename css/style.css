@@ -332,6 +332,12 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	font-size:2em;
 }
 
+.second-h5bp-label,
+.third-h5bp-label{
+	display:none;
+	visibility:hidden;
+}
+
 .customize-section a{
 	color:#E44D26;
 	text-decoration:none;
@@ -528,10 +534,10 @@ textarea{
 		clear:both;
 	}
 	
-	.customize-h5bp-no-title-middle{
-		margin-top:89px;
+	.second-h5bp-label{
+		display:block;
 	}
-
+	
 	#download-section a{
 		float:left;
 		width:48%;
@@ -649,6 +655,20 @@ textarea{
 		float:left;
 	}
 
+	.first-h5bp-label{
+		visibility:hidden;
+	}
+	
+	.second-h5bp-label{
+		visibility:visible;
+	}
+	
+	.third-h5bp-label{
+		display:block;
+	}
+	
+
+
 	.customize-section{
 		width:33.3%;
 	}
@@ -661,9 +681,6 @@ textarea{
 		clear:both;
 	}
 
-	.customize-h5bp-no-title{
-		margin-top:89px;
-	}
 
 	#about-container article{
 		width:530px;
