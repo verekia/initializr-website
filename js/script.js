@@ -27,10 +27,12 @@ $(function(){
 		            'h5bp-robots',
 		            'h5bp-humans',
 		            'h5bp-404',
-		            'h5bp-adobecrossdomain'
+		            'h5bp-adobecrossdomain',
+		            'h5bp-stylefile'
 		            ], */
 		defaultModules:{
 			blank: [
+			        'css-mode',
 			        'h5bp-content',
 			        'modernizr',
 			        'jquerymin',
@@ -45,9 +47,9 @@ $(function(){
 		            'h5bp-humans',
 		            'h5bp-404',
 		            'h5bp-adobecrossdomain'
-		            
 			        ],
 			initializr: [
+			             'css-mode',
 			             'izr-responsive',
 			             'modernizr',
 			             'respond',
@@ -59,6 +61,7 @@ $(function(){
 			             'h5bp-iecond'
 			             ],
 			bootstrap: [
+			            'less-mode',
 			            'boot-responsive',
 			             'modernizr',
 			             'respond',

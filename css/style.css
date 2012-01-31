@@ -326,6 +326,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	margin:0 5px 5px 0;
 }
 
+#customize-section label:hover{
+	background:#f5f5f5;
+}
+
 #customize-section input{
 	margin-right:6px;
 }
