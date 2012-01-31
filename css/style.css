@@ -223,6 +223,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#c4c4c4;
 }
 
+.blank-background button:active{
+	background:#888;
+}
+
 
 
 .initializr-background button,
@@ -237,6 +241,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#F67539;
 }
 
+.initializr-background button:active{
+	background:#d14509;
+}
+
 .bootstrap-background button,
 .bootstrap-background a{
 	background:#6090ff;
@@ -245,6 +253,10 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .bootstrap-background button:hover,
 .bootstrap-background a:hover{
 	background:#78a0ff;
+}
+
+.bootstrap-background button:active{
+	background:#4070df;
 }
 
 .preconfig-block{
