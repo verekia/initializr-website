@@ -425,6 +425,9 @@ textarea{
 		margin-bottom:6px;
 	}
 
+	.ie9 #follow-iframes-container iframe{
+		width:135px!important;
+	}
 	
 
 	#follow-container{
@@ -508,7 +511,7 @@ textarea{
 
 	#github-container{
 		margin:auto;
-		width:500px;
+		width:480px;
 	}
 
 	#github-container img{
@@ -564,6 +567,10 @@ textarea{
 /* 		float:right; */
 		width:auto!important;
 		margin-bottom:6px;
+	}
+	
+	.ie9 #follow-iframes-container iframe{
+		width:auto!important;
 	}
 	
 	#intro p{
