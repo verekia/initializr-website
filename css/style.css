@@ -259,6 +259,11 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#4070df;
 }
 
+.preconfig-container{
+	display:block;
+	width:100%;
+}
+
 .preconfig-block{
 	border:none;
 	display:block;
@@ -506,14 +511,14 @@ textarea{
 
 	.separator:before,
 	.separator:after{
-		width:22%;
+		width:20%;
 		display:block;
 	}
 
 	.preconfig-container{
 		float:left;
-		width:50%;
-		margin:0;
+		width:48%;
+		margin:0 1%;
 	}
 
 	.preconfig-block{
@@ -522,6 +527,7 @@ textarea{
 	.preconfig-container:last-child{
 		margin:auto;
 		float:none;
+		clear:both;
 	}
 
 	#hidden-section{
@@ -637,12 +643,13 @@ textarea{
 
 	.separator:before,
 	.separator:after{
-		width:32%;
+		width:31%;
 	}
 
 	.preconfig-container{
 		width:32%;
 		margin-right:2%;
+		margin-left:0;
 	}
 
 	.preconfig-block{
@@ -656,6 +663,7 @@ textarea{
 	.preconfig-container:last-child{
 		margin:0;
 		float:left;
+		clear:none;
 	}
 
 
