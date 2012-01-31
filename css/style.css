@@ -301,6 +301,11 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	font-size:2em;
 }
 
+.customize-section a{
+	color:#E44D26;
+	text-decoration:none;
+}
+
 textarea{
 	display:block;
 	width:700px;
