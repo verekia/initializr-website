@@ -83,6 +83,7 @@ $(function(){
 	
 	var params;
 	var modules = [];
+	var stylelang = '';
 
 	/**********
 	   EVENTS
@@ -146,11 +147,44 @@ $(function(){
 			modules.push('modernizrrespond');
 		}
 		
+		if (modules.indexOf('less-mode') != -1){
+			modules.remove('less-mode');
+			stylelang = 'less';
+		}
+		else
+			stylelang = '';
+		
+		if (modules.indexOf('css-mode') != -1){
+			modules.remove('css-mode');
+		}
+		
+		if (modules.indexOf('h5bp-content') != -1 || modules.indexOf('izr-responsive') != -1){
+			modules.push('h5bp-css');
+			modules.push('h5bp-csshelpers');
+			modules.push('h5bp-mediaqueryprint');
+		}
+
+		if (modules.indexOf('h5bp-content') != -1){
+			modules.push('h5bp-mediaqueries');
+		}
+		
+		if (modules.indexOf('h5bp-iecond') == -1){
+			modules.push('simplehtmltag');
+		}		
+
+		if (modules.indexOf('h5bp-scripts') == -1){
+			modules.push('izr-emptyscript');
+		}		
 		
 	}
 	
 	function updateUrls(){
+		var modeParam = '';
 		
+		if (stylelang != ''){
+			modeParam = 'mode=' + stylelang + '&';
+		}
+
 		params = '';
 		
 		for (var i = 0, curModule; curModule = modules[i++];){
@@ -159,11 +193,11 @@ $(function(){
 		
 		params = params.substring(0, params.length - 1);
 
-		$('#preview-url').val(config.baseUrl + 'print&' + params);
-		$('#download-url').val(config.baseUrl + params);	
+		$('#preview-url').val(config.baseUrl + 'print&' + modeParam + params);
+		$('#download-url').val(config.baseUrl + modeParam + params);	
 		
-		$('#preview-link').attr('href', config.baseUrl + 'print&' + params);
-		$('#download-link').attr('href', config.baseUrl + params);	
+		$('#preview-link').attr('href', config.baseUrl + 'print&' + modeParam + params);
+		$('#download-link').attr('href', config.baseUrl + modeParam + params);	
 	}	
 
 	/***********
