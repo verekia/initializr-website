@@ -105,7 +105,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 #title{
 	color:white;
-	font-family:'ChunkFive';
+	font-family:'ChunkFiveRegular';
 	font-weight:normal;
 	font-size:4em;
 	margin-bottom:20px;
@@ -254,7 +254,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 #download-section a
 {
 	font-weight:normal;
-	font-family:ChunkFive;
+	font-family:ChunkFiveRegular;
 	font-size:2em;
 	color:white;
 	margin:0;
@@ -280,12 +280,13 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	-webkit-border-radius:4px;
 	   -moz-border-radius:4px;
 	        border-radius:4px;
-	-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
-	   -moz-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
-	        box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
+
+	border:1px solid #ccc;
+	border-top:0;
+	border-left:0;
+
 	padding:4px 8px;
-/* 	float:left; */
-display:block;
+	display:block;
 	margin:0 5px 5px 0;
 }
 
@@ -425,7 +426,9 @@ textarea{
 		margin-bottom:6px;
 	}
 
-	.ie9 #follow-iframes-container iframe{
+	.ie9 #follow-iframes-container iframe,
+	.ie8 #follow-iframes-container iframe,
+	.ie7 #follow-iframes-container iframe{
 		width:135px!important;
 	}
 	
@@ -569,7 +572,9 @@ textarea{
 		margin-bottom:6px;
 	}
 	
-	.ie9 #follow-iframes-container iframe{
+	.ie9 #follow-iframes-container iframe,
+	.ie8 #follow-iframes-container iframe,
+	.ie7 #follow-iframes-container iframe{
 		width:auto!important;
 	}
 	
@@ -589,6 +594,10 @@ textarea{
 	.preconfig-block{
 		width:32%;
 		margin-right:2%;
+	}
+
+	.ie8 .preconfig-block{
+		width:31.33%;
 	}
 
 	.preconfig-block:last-child{
