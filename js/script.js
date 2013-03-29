@@ -217,6 +217,15 @@ $(function(){
 	if ($('input:checked').length > 0)
 		$('#hidden-section').fadeIn(0);
 	update();
+
+	if (window.devicePixelRatio >= 2){
+		var elements = $("img.replace-2x").get();
+		for(var i = 0; i < elements.length; i++) {
+			var src = elements[i].src
+			src = src.replace(".png", "@2x.png");
+			elements[i].src = src;
+		}
+	}
 	
 	
 });
