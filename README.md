@@ -97,7 +97,7 @@ QuickGatewayKit
         ydeposit.php links to yd.php
         ywithdraw.php links to yw.php
         
-        6.  You are now have a Mock Gateway!  
+        6.  You now have a Mock Gateway!  
         
         Now is the time to advertise your site and start market making over Ripple.
         The last step is to edit irba.php with the required information as outlined by ripplebusiness.org before 		applying for membership.
