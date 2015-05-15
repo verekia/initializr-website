@@ -34,7 +34,7 @@
         3.  Getting Started
         4.  Editing the Front-end
         5.  Editing the Back-end
-        6.  You are now have a Mock Gateway!  
+        6.  You now have a Mock Gateway!  
         7.  Donations
         8.  Join the Ripple Community
         
