@@ -30,6 +30,11 @@ QuickGatewayKit
         1.  Preamble
         2.  Table of Contents
         3.  Getting Started
+        4.  Editing the Front-end
+        5.  Editing the Back-end
+        6.  You are now have a Mock Gateway!  
+        7.  Donations
+        8.  Join the Ripple Community
         
         The contents of this web-kit include the following:
         
@@ -92,12 +97,17 @@ QuickGatewayKit
         ydeposit.php links to yd.php
         ywithdraw.php links to yw.php
         
-        6.  You are now have a Mock Gateway!  Now is the time to advertise your site and start market making over Ripple.
-        The last step is to edit irba.php with the required information as outlined by ripplebusiness.org before applying for
-        membership.
+        6.  You are now have a Mock Gateway!  
         
-        7.  Please consider donating a small amount of XRP or Bitcoin to rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C or
+        Now is the time to advertise your site and start market making over Ripple.
+        The last step is to edit irba.php with the required information as outlined by ripplebusiness.org before 		applying for membership.
+        
+        7.  Donations
+        
+        Please consider donating a small amount of XRP or Bitcoin to rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C or
         18DDswfzZ4QMZKxNhbgffxgN8WdnLy3mXM respectively if this web-kit was of help to you starting your Ripple-based
         business.
        
-       8.  Join us at the official Ripple forums!  https://forum.ripple.com/
+       8.  Join the Ripple Community 
+       
+       Join us at the official Ripple forums!  https://forum.ripple.com/
