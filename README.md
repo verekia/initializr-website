@@ -1,6 +1,9 @@
 # QuickGatewayKit
+
 QuickGatewayKit
+
   1.  Preamble
+
         QuickGatewayKit was produced in most part with Initializr.
         Many thanks and praise for http://www.initializr.com/ and Jonathan Verrecchia
         Many thanks and praise to the twbs/bootstrap team!!
@@ -36,11 +39,14 @@ QuickGatewayKit
         tpl.php:  this is your template file that you can copy, rename, and edit for a new page.
         
         tos.php:  this is an extremely basic Terms of Service template.  You ABSOLUTELY MUST have registered a LEGAL BUSINESS
-        within your legal jurisidiction BEFORE YOU CONDUCT BUSINESS as a Ripple Gateway.  If you have problems with writing            your terms, hire a lawyer or consult twarden on the Official Ripple forums @ https://forum.ripple.com for the possibil         -ity of consulting or further resources.
+        within your legal jurisidiction BEFORE YOU CONDUCT BUSINESS as a Ripple Gateway.  If you have problems with writing
+        your terms, hire a lawyer or consult twarden on the Official Ripple forums @ https://forum.ripple.com for the possibility of
+	consulting or further resources.
         
         irba.php:  The International Ripple Business Association (IRBA) is an organization in which member Gateways must abide
-        by a strict business practices and disclosure agreements.  The IRBA verifies important information such as banking             information.  This page includes more information on the IRBA an a simple template.  It is highly suggested if you
-        are serious about operating a Gateway to one day apply for membership.  This page becomes more important as your               Gateway project becomes more established.
+        by a strict business practices and disclosure agreements.  The IRBA verifies important information such as banking information.  
+	This page includes more information on the IRBA an a simple template.  It is highly suggested if you are serious about operating
+	a Gateway to one day apply for membership.  This page becomes more important as your Gateway project becomes more established.
         
         deposit.php:  the script that processes the asset offered by default on index.php.
         
@@ -56,7 +62,8 @@ QuickGatewayKit
         
         3.  Getting Started
         
-        By now, you should have read the Ripple Whitepapers, know of how legal it is to operate a Gateway in your legal                jurisdiction, and have an idea of what you would like to offer to the Ripple network.
+        By now, you should have read the Ripple Whitepapers, know of how legal it is to operate a Gateway in your legal jurisdiction,
+	 and have an idea of what you would like to offer to the Ripple network.
         
         First, open index.php.  Read the page entirely an replace what placeholder text is there with your information.
         When editing the form, change XXXamount and XXX Amount to the default asset ticket.
