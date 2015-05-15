@@ -32,6 +32,11 @@
         1.  Preamble
         2.  Table of Contents
         3.  Getting Started
+        4.  Editing the Front-end
+        5.  Editing the Back-end
+        6.  You are now have a Mock Gateway!  
+        7.  Donations
+        8.  Join the Ripple Community
         
         The contents of this web-kit include the following:
         
@@ -41,11 +46,14 @@
         tpl.php:  this is your template file that you can copy, rename, and edit for a new page.
         
         tos.php:  this is an extremely basic Terms of Service template.  You ABSOLUTELY MUST have registered a LEGAL BUSINESS
-        within your legal jurisidiction BEFORE YOU CONDUCT BUSINESS as a Ripple Gateway.  If you have problems with writing            your terms, hire a lawyer or consult twarden on the Official Ripple forums @ https://forum.ripple.com for the possibil         -ity of consulting or further resources.
+        within your legal jurisidiction BEFORE YOU CONDUCT BUSINESS as a Ripple Gateway.  If you have problems with writing
+        your terms, hire a lawyer or consult twarden on the Official Ripple forums @ https://forum.ripple.com for the possibility of
+	consulting or further resources.
         
         irba.php:  The International Ripple Business Association (IRBA) is an organization in which member Gateways must abide
-        by a strict business practices and disclosure agreements.  The IRBA verifies important information such as banking             information.  This page includes more information on the IRBA an a simple template.  It is highly suggested if you
-        are serious about operating a Gateway to one day apply for membership.  This page becomes more important as your               Gateway project becomes more established.
+        by a strict business practices and disclosure agreements.  The IRBA verifies important information such as banking information.  
+	This page includes more information on the IRBA an a simple template.  It is highly suggested if you are serious about operating
+	a Gateway to one day apply for membership.  This page becomes more important as your Gateway project becomes more established.
         
         deposit.php:  the script that processes the asset offered by default on index.php.
         
@@ -61,7 +69,8 @@
         
         3.  Getting Started
         
-        By now, you should have read the Ripple Whitepapers, know of how legal it is to operate a Gateway in your legal                jurisdiction, and have an idea of what you would like to offer to the Ripple network.
+        By now, you should have read the Ripple Whitepapers, know of how legal it is to operate a Gateway in your legal jurisdiction,
+	 and have an idea of what you would like to offer to the Ripple network.
         
         First, open index.php.  Read the page entirely an replace what placeholder text is there with your information.
         When editing the form, change XXXamount and XXX Amount to the default asset ticket.
@@ -69,37 +78,42 @@
         4.  Editing the Front-end
         
         When you have figured out your service fees an accepted assets, edit the remaining pages xdeposit.php, ydeposit.php
-        xwithdraw.php, and ywithdraw.php.  
+        xwithdraw.php, and ywithdraw.php.
         
         Once you have completed that, you are nearly half way there.  Now, you must complete your Terms of Service.
-        A template to get you started is found within tos.php.  Be sure to edit YOUR-LEGAL-JURISDICTION and 
+        A template to get you started is found within tos.php.  Be sure to edit YOUR-LEGAL-JURISDICTION and
         MY-BUSINESS'-LEGALLY-REGISTERED-NAME.
         
         5.  Editing the Back-end
         
-        xd.php, xw.php, yd.php, yw.php, deposit.php, and withdraw.php are all back-end PHP scripts which process a 
+        xd.php, xw.php, yd.php, yw.php, deposit.php, and withdraw.php are all back-end PHP scripts which process a
         deposit notification for the Gateway operator to process.
         
-        Replace YOUREMAIL@DOMAIN.COM with your operating email address.  Replace XXXamount and XXX amount with the 
+        Replace YOUREMAIL@DOMAIN.COM with your operating email address.  Replace XXXamount and XXX amount with the
         proper asset codes.
         
         Index.php links to deposit.php
-        Withdrawals.php links to withdraw.php 
+        Withdrawals.php links to withdraw.php
         xdeposit.php links to xd.php
         xwithdraw.php links to xw.php
         ydeposit.php links to yd.php
         ywithdraw.php links to yw.php
         
-        6.  You are now have a Mock Gateway!  Now is the time to advertise your site and start market making over Ripple.
-        The last step is to edit irba.php with the required information as outlined by ripplebusiness.org before applying for
-        membership.
+        6.  You now have a Mock Gateway!  
         
-        7.  Please consider donating a small amount of XRP or Bitcoin to rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C or 
+        Now is the time to advertise your site and start market making over Ripple.
+        The last step is to edit irba.php with the required information as outlined by ripplebusiness.org before 		applying for membership.
+        
+        7.  Donations
+        
+        Please consider donating a small amount of XRP or Bitcoin to rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C or
         18DDswfzZ4QMZKxNhbgffxgN8WdnLy3mXM respectively if this web-kit was of help to you starting your Ripple-based
         business.
        
-       8.  Join us at the official Ripple forums!  https://forum.ripple.com/
+       8.  Join the Ripple Community 
        
+       Join us at the official Ripple forums!  https://forum.ripple.com/
+
         -->
         
         <meta charset="utf-8">
