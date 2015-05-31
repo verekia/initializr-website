@@ -84,6 +84,19 @@ QuickGatewayKit
         is to operate a Gateway in your legal jurisdictionn and have an idea of
         what you would like to offer to the Ripple network.
         
+	If this is a fresh install on Ubuntu 14.04 LTS, perform the following tasks
+	as root or with sudo access:
+
+	Copy and paste into the following sources.list file these respositories:
+
+	deb http://download.webmin.com/download/repository sarge contrib 
+	deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+
+	Run sudo nano /etc/apt/sources.list, navigate to the bottom of the document
+	Paste the repository URLs at the bottom.  Commit changes to the file and exit.
+
+	Navigate to the QGK directory and run sh setup.sh.
+
         First, open index.php.  Read the page entirely an replace what placeholder
         text is there with your information. When editing the form, change XXXamount
         and XXX Amount to the default asset ticket.
