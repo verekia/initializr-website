@@ -223,7 +223,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 		<p>Service Fee:  this amount of this asset</p>
           
          <p>This is an important time to include your Gateway's Ripple Address for the user.  An example of a Ripple Address is <b><em>rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH</b></em>, make sure you replace this with yours!</p>
-		</p><p><b>IMPORTANT:</b>  If you would like to act as a rippler, please enable Rippling.  If you do not want your XAGATE IOU balances to fluctuate with other gateways you trust <em>of the same currency code</em>, then disable the Rippling option when you trust our Gateway.</p>
+		</p><p><b>IMPORTANT:</b>  If you would like to act as a rippler, please enable Rippling.  If you do not want your IOU balances to fluctuate with other gateways you trust <em>of the same currency code</em>, then disable the Rippling option when you trust our Gateway.</p>
 		</p><p>Service Fees:  this much of that asset on deposit.</p>
 		<p><b>Withdrawals</b></p>
 		 <p>Withdrawals incur this service fee.</p>
