@@ -4,8 +4,9 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
     //Find+replace XXX Amount and XXXamount to the asset code
- 
-    $email_to = "<?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $operatorEmail ?>";
+ 	include $_SERVER['DOCUMENT_ROOT']."/include.php"; 
+
+    $email_to = $operatorEmail;
  
     $email_subject = "DEFAULT WITHDRAWAL";
  
