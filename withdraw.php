@@ -1,5 +1,9 @@
 <?php
- 
+
+require_once 'config.php';
+	$conn = mysql_connect($dbhost,$dbuser,$dbpass)
+		or die ('Error connecting to mysql');
+
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
