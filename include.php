@@ -72,8 +72,4 @@ $withdrawalDeliveryEstimate['maxHours'] = 24; // int value
 $withdrawalDeliveryEstimate['asset'] = 'BTC'; // string value
 
 
-<?php
-
-}
-
 ?>
