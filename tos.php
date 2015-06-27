@@ -116,7 +116,7 @@
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -140,7 +140,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
@@ -149,18 +149,18 @@
       <hr>
 <p><b><h1>Terms of Service</h1>
 <h2>Terms of Service ("Agreement")</h2>
-<h3>This Agreement was last modified on MONTH DAY, YEAR by <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $operatorName; ?>.</h3>
+<h3>This Agreement was last modified on MONTH DAY, YEAR by <?php include "include.php";  echo $operatorName; ?>.</h3>
 </p><p>
-Please read these Terms of Service completely using <a href="index.php">our site</a> which is owned and operated by <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?>. These Agreements document the legally binding terms and conditions attached to the use of the Site: YOUR FULLY QUALIFIED DOMAIN NAME. By viewing or browsing the Site, or by accessing or using any Services, you are agreeing to be bound by these Terms of Service.</b></p>
+Please read these Terms of Service completely using <a href="index.php">our site</a> which is owned and operated by <?php include "include.php";  echo $gatewayName; ?>. These Agreements document the legally binding terms and conditions attached to the use of the Site: YOUR FULLY QUALIFIED DOMAIN NAME. By viewing or browsing the Site, or by accessing or using any Services, you are agreeing to be bound by these Terms of Service.</b></p>
 
 <u><b><p>Intellectual Property</b></u></p>
 <p>
-The Site and all of its original content are the sole property of <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> and are, as such, are fully protected by the appropriate international copyright and other intellectual property rights laws.
+The Site and all of its original content are the sole property of <?php include "include.php";  echo $gatewayName; ?><?php include "include.php";  echo $gatewayName; ?> and are, as such, are fully protected by the appropriate international copyright and other intellectual property rights laws.
 </p>
 <p><u><b>Links to Other Websites</b></u></p>
 <p>
-Our Site does contain a number of links to other websites and online resources that are not owned or controlled by <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?>.</p><p>
-<?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> has no control over, and therefore cannot assume responsibility for, the content or general practices of any of these third party sites and/or services. Therefore, we strongly advise you to read the entire terms and conditions and privacy policy of any site that you visit as a result of following a link that is posted on our site.<p>
+Our Site does contain a number of links to other websites and online resources that are not owned or controlled by <?php include "include.php";  echo $gatewayName; ?>.</p><p>
+<?php include "include.php";  echo $gatewayName; ?> has no control over, and therefore cannot assume responsibility for, the content or general practices of any of these third party sites and/or services. Therefore, we strongly advise you to read the entire terms and conditions and privacy policy of any site that you visit as a result of following a link that is posted on our site.<p>
 
 
 <p><b><u>Laws Affecting Transactions</u></b></p>
@@ -197,11 +197,11 @@ These Agreements are governed in accordance with the laws of YOUR-LEGAL-JURISDIC
 
 <p><b><u>Changes to these Agreement(s)</u></b></p>
 
-<p><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?>.  <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> reserves the right to modify these Terms of Service at any time. Your decision to continue to visit and make use of the Site an its services after such changes have been made constitutes your formal acceptance of the new Terms of Service. Therefore, we ask that you review these Agreement(s) for such changes on an occasional basis. Should you not agree to any provision of these Agreement(s) or any changes we make to these Agreement(s), we ask and advise that you do not use or continue to access the MY-BUSINESS'-LEGALLY-REGISTERED-NAME site nor its services immediately.</p>
+<p><?php include "include.php";  echo $gatewayName; ?>.  <?php include "include.php";  echo $gatewayName; ?> reserves the right to modify these Terms of Service at any time. Your decision to continue to visit and make use of the Site an its services after such changes have been made constitutes your formal acceptance of the new Terms of Service. Therefore, we ask that you review these Agreement(s) for such changes on an occasional basis. Should you not agree to any provision of these Agreement(s) or any changes we make to these Agreement(s), we ask and advise that you do not use or continue to access the MY-BUSINESS'-LEGALLY-REGISTERED-NAME site nor its services immediately.</p>
 
 <p><u><b>Termination and Denial of Services</b></u></p>
 
-<p><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> reserves the right to terminate your access to the Site an its services, without any advance notice. <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> also reserves the right to refuse deposits or withdrawals, without any advance notice (for example, in the instance of suspicious orders).</p>
+<p><?php include "include.php";  echo $gatewayName; ?> reserves the right to terminate your access to the Site an its services, without any advance notice. <?php include "include.php";  echo $gatewayName; ?> also reserves the right to refuse deposits or withdrawals, without any advance notice (for example, in the instance of suspicious orders).</p>
 
 <p><u><b>Pricing Information</b></u></p>
 
@@ -209,13 +209,13 @@ These Agreements are governed in accordance with the laws of YOUR-LEGAL-JURISDIC
 
 <p><b><u>Contact Us</u></b></p>
 
-<p>If you have any questions about this Agreement, please feel free to contact me at <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $operatorEmail ?>. Estimated response times will vary between 24-48 hours.
+<p>If you have any questions about this Agreement, please feel free to contact me at <?php include "include.php";  echo $operatorEmail ?>. Estimated response times will vary between 24-48 hours.
 </p>
 
 </div>
       <hr>
       <footer>
-        <p>&copy; <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
+        <p>&copy; <?php include "include.php";  echo $gatewayName; ?> 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
         <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">QuickGatewayKit</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/whotooktwarden/QuickGatewayKit" property="cc:attributionName" rel="cc:attributionURL">Taylor Warden</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/verekia/initializr-website" rel="dct:source">https://github.com/verekia/initializr-website</a>.</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

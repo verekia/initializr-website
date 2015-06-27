@@ -71,5 +71,15 @@ $withdrawalDeliveryEstimate = array(); $withdrawalDeliveryEstimate['minHours'] =
 $withdrawalDeliveryEstimate['maxHours'] = 24; // int value
 $withdrawalDeliveryEstimate['asset'] = 'BTC'; // string value
 
-
+return $withdrawalDeliveryEstimate['maxHours'];
+return $withdrawalDeliveryEstimate['asset'];
+return $depositDeliveryEstimate['maxHours'];
+return $depositDeliveryEstimate['asset'];
+return $asset;
+return $transitFee;
+return $depositFee;
+return $withdrawalFee;
+return $operatorEmail;
+return $operatorName;
+return $gatewayName;
 ?>
