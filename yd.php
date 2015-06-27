@@ -1,14 +1,18 @@
 
 <?php
- 
+
+require_once 'config.php';
+        $conn = mysql_connect($dbhost,$dbuser,$dbpass)
+                or die ('Error connecting to mysql');
+
 if(isset($_POST['email'])) {
  
      
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
     //Find+replace XXX Amount and XXXamount to the asset code
-    
-    $email_to = "YOUREMAIL@DOMAIN.COM";
+include $_SERVER['DOCUMENT_ROOT']."/include.php"; 
+    $email_to = $operatorEmail;
  
     $email_subject = "X Deposit";
  
@@ -252,7 +256,7 @@ $headers = 'From: '.$email_from."\r\n".
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>QWK</title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -276,7 +280,7 @@ $headers = 'From: '.$email_from."\r\n".
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php">QWK</a><!-- YOUR HOMEPAGE LINK-->
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
@@ -313,7 +317,7 @@ Return to <a href="index.php">the index</a>.<br />
       </div>
       <hr>
       <footer>
-        <p>&copy; MY-BUSINESS'-LEGALLY-REGISTERED-NAME 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
+        <p>&copy; <?php include "include.php";  echo $gatewayName; ?> 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
         <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">QuickGatewayKit</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/whotooktwarden/QuickGatewayKit" property="cc:attributionName" rel="cc:attributionURL">Taylor Warden</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/verekia/initializr-website" rel="dct:source">https://github.com/verekia/initializr-website</a>.</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
