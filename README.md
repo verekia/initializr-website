@@ -130,9 +130,9 @@ QuickGatewayKit
         complete your Terms of Service.  A template to get you started is found within
         tos.php.
         
-        A include file is, include.php, will replicate information such as the Gateway's name, operator's name,
-        as well as allow for you to manage accepted assets and their estimated delivery times.
-        
+        include.php will replicate information such as the Gateway's name, operator's name,
+	as well as allow for you to manage accepted assets and their estimated delivery times.
+
         5.  Editing the Back-end
         
         xd.php, xw.php, yd.php, yw.php, deposit.php, and withdraw.php are all back-end
