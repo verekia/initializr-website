@@ -50,6 +50,12 @@ RPC
 
 The JSON-RPC client that works the best with Chrome is the Postman extension found @ 
 https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+When using the Postman client, ensure you are using the correct settings.  You should 
+also be careful with the URL if using this client in conjunction with REST, the URL
+will determine which endpoint the API will use, if you malform the URL you will receive
+invalid request as the return.  Also, ensure you click the Body tab, Raw radio button, and
+select JSON (application/json) instead of the default text mode or else your JSON
+requests will not respond successfully with ripple-REST.
 
 Within this extension, select POST and then enter the URL:
 
