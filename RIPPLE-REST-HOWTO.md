@@ -1,6 +1,6 @@
 _TRUSTLINES_
 
-To set a trust line easily, I suggest using the minimalist client, but to do this with ripple-REST:
+To set a trust line easily with ripple-REST:
 
 POST to https://xagate.com:5990 /v1/accounts/rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH/trustlines?validated=true
 
