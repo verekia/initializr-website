@@ -147,6 +147,8 @@ QuickGatewayKit
         ydeposit.php links to yd.php
         ywithdraw.php links to yw.php
         
+        Change the password within config.php to the password you chose when running mysql_setup.sh
+        
         6.  You now have a Mock Gateway!  
         
         Now is the time to advertise your site and start market making over Ripple.
