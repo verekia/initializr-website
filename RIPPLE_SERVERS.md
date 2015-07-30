@@ -15,8 +15,8 @@ you can send GET requests from your web browser by navigating to any of the avai
 It is not suggested to send POST requests to this server unless it is a test account.  
 To POST via the command line, you can use the curl package.  A curl command starts with the syntax:
 
-curl -H "Content-Type: application/json" -X POST -d '{"method":
-...
+      curl -H "Content-Type: application/json" -X POST -d '{"method":
+      ...
 
 Where you specify the method and what accompanying JSON you wish to POST. 
 
@@ -38,10 +38,10 @@ and then click on Open.  If the response is 'undefined' then this server may be 
 If the response is OPEN, then you may enter whatever JSON you wish to execute into the text field directly below the URL.  
 I.E. if you wanted to fetch a new Ripple wallet, you would enter:
 
-{
-    "command": "wallet_propose",
-    "passphrase": "test"
-}
+     {
+         "command": "wallet_propose",
+         "passphrase": "test"
+     }
 
 Please remember that in this specific case you should use a randomly generated string of alphanumeric characters 
 (at least 12-35 characters in length).
@@ -65,19 +65,18 @@ to access the rippled server.  For example, if you wanted to receive account inf
 click on the Body tab below the URL field and click on the Raw button.  In the text field below, input:
 
 
-{
-    "method": "account_info",
-    "params": [
-        {
-            "account": "rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH",
-            "strict": true,
-            "ledger_index": "validated"
-        }
-    ]
-}
+       {
+           "method": "account_info",
+           "params": [
+               {
+                   "account": "rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH",
+                   "strict": true,
+                   "ledger_index": "validated"
+               }
+           ]
+       }
 
 To receive more information about this account.
 
 For any issues you face with either of these APIs, you can ask for assistance @ https://forum.ripple.com on the Developers board.  
 Before posting a new thread regarding your issue, please use the search function as your answer might already exist.
-
