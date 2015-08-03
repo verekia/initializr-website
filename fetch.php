@@ -128,4 +128,46 @@ echo "This example is the ~Rippleunion order book for $getRUCADOrders <br />";
 //echo $LTCOrdersJson;
 //echo $LTCOrdersArray;
 
+$getSSBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q">XRP/BTC.~SnapSwap</a>';
+$BTCOrdersArray = file_get_contents($getSSBTCOrders);
+$BTCOrdersJson = json_encode($BTCOrdersArray);
+echo "This example is the ~SnapSwap order book for $getSSBTCOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getSSUSDOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/USD+rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q">XRP/USD.~SnapSwap</a>';
+$USDOrdersArray = file_get_contents($getSSUSDOrders);
+$USDOrdersJson = json_encode($USDOrdersArray);
+echo "This example is the ~SnapSwap order book for $getSSUSDOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getDRBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rfYv1TXnwgDDK4WQNbFALykYuEBnrR4pDX">XRP/BTC.~Dividendrippler</a>';
+$BTCOrdersArray = file_get_contents($getDRBTCOrders);
+$BTCOrdersJson = json_encode($BTCOrdersArray);
+echo "This example is the ~Dividendrippler order book for $getDRBTCOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getBSEUROrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/EUR+rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B">XRP/EUR.~Bitstamp</a>';
+$EUROrdersArray = file_get_contents($getBSUROrders);
+$EUROrdersJson = json_encode($EUROrdersArray);
+echo "This example is the ~Bitstamp order book for $getBSEUROrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getUSDSSEURBSOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/USD+rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q/EUR+rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B">USD.~SnapSwap/EUR.~Bitstamp</a>';
+$USDEUROrdersArray = file_get_contents($getUSDSSEURBSOrders);
+$USDEUROrdersJson = json_encode($EUROrdersArray);
+echo "This example is the ~SnapSwap/~Bitstamp order book for $getUSDSSEURBSOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getBTCSSBTCBSOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/BTC+rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q/BTC+rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B">BTC.~SnapSwap/BTC.~Bitstamp</a>';
+$BTCBTCOrdersArray = file_get_contents($getBTCSSBTCBSOrders);
+$BTCBTCOrdersJson = json_encode($BTCOrdersArray);
+echo "This example is the ~SnapSwap/~Bitstamp order book for $getBTCSSBTCBSOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
 ?>
