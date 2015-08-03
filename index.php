@@ -159,6 +159,7 @@
 		<li>Here is the second one, I can copy and paste it below for more supporting facts</li>
 		<li><a href="https://xagate.com">XAGATE.com</a> the official QGK demonstration website</li>
 		<li>View our <a href="products.php">example Ripple web-store</a></li>
+		<li>View our <a href="fetch.php">Ripple statistics page</a></li>
 		<li>This site acts as a showcase for the different versions of the web-kit</li>
 		</li><li><b>This is the last important fact in bold</b></li></ul><br />
         <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
