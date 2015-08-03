@@ -37,9 +37,10 @@ echo "XRP is $xrp USD each.<br />"; //returns XRP with USD price
 //multiply the result of $xrp by the result of $exchangeRate to find $cadxrprate
 //CA:\s[0-9.]{2,} first match
 
-$content2 = file_get_contents("http://www.bankofcanada.ca/stats/assets/rates_rss/closing/en_USD_CLOSE.xml");
-$cadpattern = '/CA:\s[0-9.]{2,}/';
-$findcad = '/[0-9.]{2,}/';
+$content2 = file_get_contents("http://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=CAD");
+//echo $content2;
+$cadpattern = '/[0-9](.\d*)&nbsp;CAD/';
+$findcad = '/[0-9](.\d*)/';
 
 preg_match($cadpattern, $content2, $cadmatch);
 $thereturn = json_encode($cadmatch); //converts the array to a string
@@ -54,10 +55,10 @@ $cadstr = json_encode($returnedmatch);
 $findme = '"'; //looks for the ending portion of the data-usd string from coinmarketcap.com
 $pos = strpos($cadstr, $findme);  //Find the position of the above string in the matched case
 //echo "pos: $pos <br />";  //displays the position
-$cad = substr($cadstr, ($pos+1), 6); //Gets up to 10 digits of data from the data-usd field
+$cad = substr($cadstr, ($pos+1), 6); //Gets up to 7 digits of data from the data-usd field
 //echo "cadstr: $cadstr <br />"; // displays it to the user
 //echo "cad: $cad <br />"; // displays it to the user
-echo "The CAD to USD exchange rate is currently $cad USD per CAD.<br />"; //returns XRP with USD price
+echo "The USD/CAD exchange rate is currently $cad CAD per USD.<br />"; //returns XRP with USD price
 
 $xrpincad = $xrp * $cad;
 
