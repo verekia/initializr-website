@@ -62,14 +62,70 @@ echo "The USD/CAD exchange rate is currently $cad CAD per USD.<br />"; //returns
 
 $xrpincad = $xrp * $cad;
 
-echo "Each XRP is $xrpincad in CAD.";
+echo "Each XRP is $xrpincad in CAD. <br /><br /><hr>";
 
 $exchangeRate = $cad;
 $ripplesCAD = $xrpincad;
 $ripplesUSD = $xrp;
 
-return $exchangeRate;
-return $ripplesCAD;
-return $ripplesUSD;
+//return $exchangeRate;
+//return $ripplesCAD;
+//return $ripplesUSD;
+
+$getXagateBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/BTC.~Xagate</a>';
+$BTCOrdersArray = file_get_contents($getXagateBTCOrders);
+$BTCOrdersJson = json_encode($BTCOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateBTCOrders <br />";
+//echo $BTCOrdersJson;
+//echo $BTCOrdersArray;
+
+$getXagateNXTOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/NXT+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/NXT.~Xagate</a>';
+$NXTOrdersArray = file_get_contents($getXagateNXTOrders);
+$NXTOrdersJson = json_encode($NXTOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateNXTOrders <br />";
+//echo $NXTOrdersJson;
+//echo $NXTOrdersArray;
+
+$getXagateLTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/LTC+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/LTC.~Xagate</a>';
+$LTCOrdersArray = file_get_contents($getXagateLTCOrders);
+$LTCOrdersJson = json_encode($LTCOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateLTCOrders <br />";
+//echo $LTCOrdersJson;
+//echo $LTCOrdersArray;
+
+$getXagateXAGOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/XAG+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/XAG.~Xagate</a>';
+$XAGOrdersArray = file_get_contents($getXagateXAGOrders);
+$XAGOrdersJson = json_encode($XAGOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateXAGOrders <br />";
+//echo $LTCOrdersJson;
+//echo $LTCOrdersArray;
+
+$getXagateXAUOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/XAU+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/XAU.~Xagate</a>';
+$XAUOrdersArray = file_get_contents($getXagateXAUOrders);
+$XAUOrdersJson = json_encode($LTCOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateXAUOrders <br />";
+//echo $XAUOrdersJson;
+//echo $XAUOrdersArray;
+
+$getXagateXPTOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/XPT+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/XPT.~Xagate</a>';
+$XPTOrdersArray = file_get_contents($getXagateXPTOrders);
+$XPTOrdersJson = json_encode($XPTOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateXPTOrders <br />";
+//echo $LTCOrdersJson;
+//echo $LTCOrdersArray;
+
+$getXagateXPDOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/XPD+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/XPD.~Xagate</a>';
+$XPDOrdersArray = file_get_contents($getXagateXPDOrders);
+$XPDOrdersJson = json_encode($XPDOrdersArray);
+echo "This example is the ~Xagate order book for $getXagateXPDOrders <br />";
+//echo $LTCOrdersJson;
+//echo $LTCOrdersArray;
+
+$getRUCADOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/CAD+r3ADD8kXSUKHd6zTCKfnKT3zV9EZHjzp1S">XRP/CAD.~RippleUnion</a>';
+$CADOrdersArray = file_get_contents($getRUCADOrders);
+$CADOrdersJson = json_encode($CADOrdersArray);
+echo "This example is the ~Rippleunion order book for $getRUCADOrders <br />";
+//echo $LTCOrdersJson;
+//echo $LTCOrdersArray;
 
 ?>
