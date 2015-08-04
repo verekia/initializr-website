@@ -1,5 +1,5 @@
 #!/bin/sh
-mysql -D qgk -u root -pFuckingrainbows1Buddymew1 << EOF
+mysql -D qgk -u qgk_user -pPASSWORD << EOF
 
 use qgk;
 
