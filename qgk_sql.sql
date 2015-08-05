@@ -25,6 +25,6 @@ CREATE TABLE private (
 );
 
 CREATE TABLE redeem (
-	id int NOT NULL AUTO_INCREMENT
+	id int NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY(id)
 );
