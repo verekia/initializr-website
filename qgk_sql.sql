@@ -1,7 +1,5 @@
-mysql -D qgk -u qgk_user -pPASSWORD 
-
-use qgk;
-
+MYSQL -D qgk -u qgk_user -pPASSWORD 
+USE qgk;
 CREATE TABLE users (
 	id int NOT NULL AUTO_INCREMENT,
 	email  varchar(60) NOT NULL,
