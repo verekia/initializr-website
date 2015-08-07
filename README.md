@@ -133,6 +133,11 @@ QuickGatewayKit
         include.php will replicate information such as the Gateway's name, operator's name,
 	as well as allow for you to manage accepted assets and their estimated delivery times.
 
+	header.php will replicate the menu bar hyperlinks across all pages.
+
+	footer.php will replicate the Terms of Service link, copyright notice, and license
+	across all pages.
+
         5.  Editing the Back-end
         
         xd.php, xw.php, yd.php, yw.php, deposit.php, and withdraw.php are all back-end

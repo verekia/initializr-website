@@ -31,7 +31,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-	<a class="navbar-brand" href="index.php">XAGATE</a><a class="navbar-brand" href="withdrawals.php">Withdraw XAG</a><a class="navbar-brand" href="cryptodeposits.php">Deposit Cryptocurrency</a><a class="navbar-brand" href="withdrawcrypto.php">Withdraw Cryptocurrency</a><a class="navbar-brand" href="depositcad.php">Deposit CAD$</a><a class="navbar-brand" href="withdrawcad.php">Withdraw CAD$</a><a href="pms.php">Other Precious Metals</a>
+			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php; echo $headerText; ?>
         </div>
         <div class="navbar-collapse collapse">
         
@@ -55,9 +56,7 @@
 
 <p><u><a href="https://xagate.com/blog/index.php/category/gateway-audit/">Gateway Audits</a></p></u>
 
- <footer>
-        <p>&copy; XAGATE 2014</p><p><a href="/tos.php">ToS</a></p>
-      </footer>
+<?php include "footer.php; echo $footerText; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
