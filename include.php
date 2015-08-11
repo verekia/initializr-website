@@ -71,6 +71,17 @@ $withdrawalDeliveryEstimate = array(); $withdrawalDeliveryEstimate['minHours'] =
 $withdrawalDeliveryEstimate['maxHours'] = 24; // int value
 $withdrawalDeliveryEstimate['asset'] = 'BTC'; // string value
 
+/*
+$blogLink = '<a class="navbar-brand" href="http://quickgatewaykit.org/blog">The QuickGatewayKit Blog</a>';
+$masterLink = '<a class="navbar-brand" href="QuickGatewayKit">QuickGatewayKit Master Branch Demo</a>';
+$headerText = "$bloglink $masterLink";
+
+return blogLink;
+return masterLink;
+return $lastMajorPrerelease;
+return $lastMinorPrerelease;
+return $headerText;
+*/
 return $withdrawalDeliveryEstimate['maxHours'];
 return $withdrawalDeliveryEstimate['asset'];
 return $depositDeliveryEstimate['maxHours'];
