@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
           </button>
 			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php; echo $headerText; ?>
+			<?php include "header.php"; echo "$headerText"; ?>
         </div>
         <div class="navbar-collapse collapse">
         
@@ -56,7 +56,7 @@
 
 <p><u><a href="https://xagate.com/blog/index.php/category/gateway-audit/">Gateway Audits</a></p></u>
 
-<?php include "footer.php; echo $footerText; ?>
+<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 

@@ -274,7 +274,7 @@ $headers = 'From: '.$email_from."\r\n".
             <span class="icon-bar"></span>
           </button>
 			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php; echo $headerText; ?>
+			<?php include "header.php"; echo "$headerText"; ?>
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
@@ -307,7 +307,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 Thank you for contacting us. We will be mailing instructions for your transaction to the provided email address.<br /><br />
 
 Return to <a href="index.php">the index</a>.<br />
-	<?php include "footer.php; echo $footerText; ?>
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 

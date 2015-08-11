@@ -281,7 +281,7 @@ $headers = 'From: '.$email_from."\r\n".
             <span class="icon-bar"></span>
           </button>
 			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php; echo $headerText; ?> 
+			<?php include "header.php"; echo "$headerText"; ?> 
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
@@ -317,7 +317,7 @@ Return to <a href="index.php">the index</a>.<br />
     
       </div>
       <hr>
-	<?php include "footer.php; echo $footerText; ?>
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
