@@ -25,7 +25,7 @@ QuickGatewayKit
         the  asset for the default deposit and withdrawal actions.  The reason or this decision
         is that any source code forked from Bitcoin or Litecoin's code should include the same
         or very similar processes for the scripts this web-kit provides to allow for a resource
-        as how to implment cryptocurrency deposits and withdrawals.
+        as how to implement cryptocurrency deposits and withdrawals.
         
         Please do your own due diligence when developing a Ripple business, such as 
         a Gateway.  You must do your own research and contact relevent Government
