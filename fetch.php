@@ -72,6 +72,26 @@ $ripplesUSD = $xrp;
 //return $ripplesCAD;
 //return $ripplesUSD;
 
+$goldContents = "https://www.quandl.com/api/v1/datasets/WGC/GOLD_DAILY_CAD.json?sort_order=asc?exclude_headers=true?column=2";
+$contentGoldPrice = file_get_contents($goldContents);
+$findGoldPrice = '/\"premium\":false,"data":\[\[\"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]",[0-9][0-9][0-9][0-9].[0-9]\],/';
+preg_match($findGoldPrice, $contentGoldPrice, $trimGoldPrice);
+$findAUPrice = '/[0-9][0-9][0-9][0-9][.][0-9]/';
+$jsonTrimGoldPrice = json_encode($trimGoldPrice);
+//echo "$jsonTrimGoldPrice<br />";
+preg_match($findAUPrice, $jsonTrimGoldPrice, $XAUinCAD);
+//echo $contentGoldPrice;
+$jsonXAUinCAD = json_encode($XAUinCAD);
+
+$findme = '"'; //looks for the ending portion of the data-usd string from coinmarketcap.com
+$pos = strpos($jsonXAUinCAD, $findme);  //Find the position of the above string in the matched case
+//echo "pos: $pos <br />";  //displays the position
+$XAUstr = substr($jsonXAUinCAD, ($pos+1), 6); //Gets up to 7 digits of data from the data-usd field
+//echo "cadstr: $cadstr <br />"; // displays it to the user
+//echo "cad: $cad <br />"; // displays it to the user
+
+echo "One troy ounce of Gold (XAU) is $XAUstr in Canadian Dollars.<br /><br /><hr>";
+
 $getXagateBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/BTC.~Xagate</a>';
 $BTCOrdersArray = file_get_contents($getXagateBTCOrders);
 $BTCOrdersJson = json_encode($BTCOrdersArray);
