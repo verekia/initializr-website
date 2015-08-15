@@ -25,7 +25,7 @@ $pos = strpos($firstreturn, $findme);  //Find the position of the above string i
 $xrp = substr($firstreturn, ($pos+4), 9); //Gets up to 10 digits of data from the data-usd field
 //echo "str: $xrp <br />"; // displays it to the user
 
-echo "XRP is $xrp USD each.<br />"; //returns XRP with USD price
+echo "XRP is <b>$xrp</b> USD each.<br />"; //returns XRP with USD price
 
 //Remove comments to debug the array
 //echo "xrp match, regex return: " ;
@@ -58,11 +58,11 @@ $pos = strpos($cadstr, $findme);  //Find the position of the above string in the
 $cad = substr($cadstr, ($pos+1), 6); //Gets up to 7 digits of data from the data-usd field
 //echo "cadstr: $cadstr <br />"; // displays it to the user
 //echo "cad: $cad <br />"; // displays it to the user
-echo "The USD/CAD exchange rate is currently $cad CAD per USD.<br />"; //returns XRP with USD price
+echo "The USD/CAD exchange rate is currently <b>$cad</b> CAD per USD.<br />"; //returns XRP with USD price
 
 $xrpincad = $xrp * $cad;
 
-echo "Each XRP is $xrpincad in CAD. <br /><br /><hr>";
+echo "Each XRP is <b>$xrpincad</b> in CAD. <br /><hr>";
 
 $exchangeRate = $cad;
 $ripplesCAD = $xrpincad;
@@ -71,6 +71,8 @@ $ripplesUSD = $xrp;
 //return $exchangeRate;
 //return $ripplesCAD;
 //return $ripplesUSD;
+
+//END RIPPLE STATS
 
 $goldContent = 'https://www.quandl.com/api/v1/datasets/WGC/GOLD_DAILY_CAD.json?auth_token=6nCuz4gzMzxRdXWQqyNK';
 $contentGoldPrice = file_get_contents($goldContent);
@@ -82,7 +84,83 @@ preg_match($findAUPrice, $contentGoldPrice, $trimGoldPrice);
 //$findAUPrice = '/[0-9][0-9][0-9][0-9][.][0-9]/';
 //echo "trimGoldPrice: $trimGoldPrice[0]";
 $XAUinCAD = $trimGoldPrice[0];
-echo "One troy ounce of Gold (XAU) is $XAUinCAD in Canadian Dollars.<br />";
+echo "One troy ounce of Gold (XAU) is <b>$XAUinCAD</b> in Canadian Dollars.<br />";
+
+
+$silverContent = 'https://www.quandl.com/api/v1/datasets/LBMA/SILVER.json?auth_token=6nCuz4gzMzxRdXWQqyNK';
+$contentSilverPrice = file_get_contents($silverContent);
+//echo "silverContent: $silverContent<br />";
+//echo "contentSilverPrice holds: $contentSilverPrice";
+$findAGPrice = "/,[0-9]{1,4}[.][0-9]{1,2}/";
+preg_match($findAGPrice, $contentSilverPrice, $trimSilverPrice);
+//print_r($trimSilverPrice);
+$XAGinUSD = substr($trimSilverPrice[0], 1, strlen($trimSilverPrice[0]));
+$XAGstr = substr($trimSilverPrice[0], 1, strlen($trimSilverPrice[0]));
+$XAGinCAD = $XAGstr * $cad;
+echo "One troy ounce of Silver (XAG) is <b>$XAGinUSD</b> in US Dollars.<br />";
+echo "One troy ounce of Silver (XAG) is <b>$XAGinCAD</b> in Canadian Dollars.<br />";
+
+$goldSilverContents = 'https://www.quandl.com/api/v1/datasets/MWORTH/10_3.json?auth_token=6nCuz4gzMzxRdXWQqyNK';
+$contentGoldSilverRatio = file_get_contents($goldSilverContents);
+$findRatio = '/,[0-9]{0,4}.[0-9]{1,2}/';
+preg_match($findRatio, $contentGoldSilverRatio, $trimRatio);
+//$findAGPrice = '/,[0-9]{0,4}.[0-9]{1,2}/';
+$jsonRatio = json_encode($trimRatio);
+$findme = ',';
+$pos = strpos($trimRatio[0], $findme);
+//echo "pos: $pos<br />";
+$goldSilverRatio = substr($trimRatio[0], ($pos+1), 5);
+
+//echo "goldSilverRatio: $goldSilverRatio<br />";
+//echo "cad: $cad<br />";
+echo "Each troy ounce of Gold (XAU) purchases <b>$goldSilverRatio</b> troy ounces of Silver (XAG).<br />";
+
+$platinumContents = "https://www.quandl.com/api/v1/datasets/LPPM/PLAT.json?auth_token=6nCuz4gzMzxRdXWQqyNK";
+$contentPlatinum = file_get_contents($platinumContents);
+$findPlatinumPrice = '/,[0-9]{0,4}.[0-9]{1,2}/';
+preg_match($findPlatinumPrice, $contentPlatinum, $trimPlatinum);
+//$findAGPrice = '/,[0-9]{0,4}.[0-9]{1,2}/';
+$jsonPlatinum = json_encode($trimPlatinum);
+$findme = ',';
+$pos = strpos($trimPlatinum[0], $findme);
+//echo "pos: $pos<br />";
+$platinumUSD = substr($trimPlatinum[0], ($pos+1), 5);
+
+$platinumCAD = $platinumUSD * $cad;
+
+//echo "cad: $cad<br />";
+echo "One troy ounce of Platinum (XPT) is <b>$platinumUSD</b> in US Dollars.<br />";
+echo "One troy ounce of Platinum (XPT) is <b>$platinumCAD</b> in Canadian Dollars.<br />";
+
+$palladiumContents = 'https://www.quandl.com/api/v1/datasets/PERTH/PALL_USD_D.json?auth_token=6nCuz4gzMzxRdXWQqyNK';
+$contentPalladium = file_get_contents($palladiumContents);
+$findPalladiumPrice = '/(",[0-9]{0,4}.[0-9]{1,2},)/';
+preg_match($findPalladiumPrice, $contentPalladium, $trimPalladium);
+$findme = ',';
+$pos = strpos($trimPalladium[0], $findme);
+//echo "pos: $pos<br />";
+$palladiumUSD = substr($trimPalladium[0], ($pos+1), 5);
+
+$palladiumCAD = $palladiumUSD * $cad;
+
+//echo "cad: $cad<br />";
+echo "One troy ounce of Palladium (XPD) is <b>$palladiumUSD</b> in US Dollars.<br />";
+echo "One troy ounce of Palladium (XPD) is <b>$palladiumCAD</b> in Canadian Dollars.<br />";
+
+$btcContents = "https://www.quandl.com/api/v1/datasets/BCHARTS/VIRTEXCAD.json?auth_token=6nCuz4gzMzxRdXWQqyNK";
+$contentBTC = file_get_contents($btcContents);
+$findBTCPrice = '/,[0-9]{1,3}.[0-9]{1,10}\]/';
+preg_match($findBTCPrice, $contentBTC, $trimBTC);
+$findme = ',';
+$pos = strpos($trimBTC[0], $findme);
+//echo "pos: $pos<br />";
+$BTCCAD = substr($trimBTC[0], ($pos+1), 8);
+
+//echo "cad: $cad<br />";
+echo "One Bitcoin (BTC) is <b>$BTCCAD</b> in Canadian Dollars.<hr>";
+
+//END QUANDL STATS
+
 
 $getXagateBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/BTC.~Xagate</a>';
 $BTCOrdersArray = file_get_contents($getXagateBTCOrders);
@@ -182,4 +260,18 @@ echo "This example is the ~SnapSwap/~Bitstamp order book for $getBTCSSBTCBSOrder
 //echo $BTCOrdersJson;
 //echo $BTCOrdersArray;
 
+//BEGIN AUDIT
+echo "<hr>These statistics were provided by the following endpoints:<br />";
+
+echo '<a href="http://coinmarketcap.com/">Coin Market Cap</a><br />';
+
+echo '<a href="http://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=CAD">XE.com</a><br />';
+echo '<a href="https://www.quandl.com/data/WGC/GOLD_DAILY_CAD-Gold-Prices-Daily-Currency-CAD">World Gold Council</a><br />';
+echo '<a href="https://www.quandl.com/data/LBMA/SILVER-Silver-Price-London-Fixing">London Bullion Market Association</a><br />';
+echo '<a href="https://www.quandl.com/data/LPPM/PLAT-Platinum-Fixing">London Platinum & Palladium Market</a><br />';
+echo '<a href="https://www.quandl.com/data/MWORTH/10_3-Gold-Silver-Price-Ratio">MeasuringWorth</a><br />';
+echo '<a href="https://www.quandl.com/data/PERTH/PALL_USD_D-Palladium-Prices-USD-Daily">Perth Mint</a><br />';
+echo '<a href="https://www.quandl.com/data/BCHARTS/VIRTEXCAD-Bitcoin-Markets-virtexCAD">Bitcoin Charts Exchange Rate Data (virtexCAD)</a><br />';
+echo '<a href="https://ripple.com/build/ripple-rest/#get-order-book">ripple-REST: Get Order Book</a><hr>';
+echo "<b><em>This data product is provided as-is, and QGK makes no warranty, either express or implied, including but not limited to, warranties of merchantability and fitness for a particular purpose. In no event will QGK be liable for any direct, special, indirect, consequential or other damages, however caused.</b></em>";
 ?>
