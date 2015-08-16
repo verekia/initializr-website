@@ -1,8 +1,23 @@
-use to stop script on failures. Probably best to wrap in function, call with commands.
+use software-properties-common >= 12.10
+https://bugs.launchpad.net/ubuntu/+source/ubuntu-meta/+bug/439566
 
-From http://unix.stackexchange.com/questions/175146/apt-get-update-exit-status
-if ! { sudo apt-get update 2>&1 || echo E: update failed; } | grep -q '^[WE]:'; then
-    echo success
-else
-    echo failure
-fi
+can jcameron key be retrieved over https, perhaps keyserver lookup?
+
+consider LAMP for simpler install. 
+sudo apt-get install lamp-server^
+Output:
+The following extra packages will be installed:
+  libxml2 lsof psmisc sgml-base xml-core
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-mpm-prefork libaio1
+  libapache2-mod-php5 libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libdbd-mysql-perl libdbi-perl libhtml-template-perl
+  libmysqlclient18 libterm-readkey-perl libwrap0 libxml2 lsof mysql-client-5.5
+  mysql-client-core-5.5 mysql-common mysql-server mysql-server-5.5
+  mysql-server-core-5.5 php5-cli php5-common php5-json php5-mysql
+  php5-readline psmisc sgml-base ssl-cert tcpd xml-core
+
+
+consider wrapping this in a function to catch script installer errors:
+unix.stackexchange.com/questions/175146/apt-get-update-exit-status
+
