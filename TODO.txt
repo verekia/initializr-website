@@ -1,0 +1,8 @@
+use to stop script on failures. Probably best to wrap in function, call with commands.
+
+From http://unix.stackexchange.com/questions/175146/apt-get-update-exit-status
+if ! { sudo apt-get update 2>&1 || echo E: update failed; } | grep -q '^[WE]:'; then
+    echo success
+else
+    echo failure
+fi

@@ -11,7 +11,7 @@ echo "This script will now attempt to install Apache, MySQL, PHP5, webmin, and p
 echo "IMPORTANT:  When you encounter the installation of phpMyadmin, Choose Apache and then YES for dbconfig-common.";
 #Update first
 echo "Attempting to run command sudo apt-get update, if Ubuntu asks you for your sudo/root password, please enter it.";
-sudo apt-get update
+sudo apt-get update && sudo apt-get upgrade
 echo "Attempting to run command sudo apt-get install python-software-properties -f, Ubuntu will now ask you for your sudo/root password.";
 #different package >=12.10: ref: software-properties-common https://bugs.launchpad.net/ubuntu/+source/ubuntu-meta/+bug/439566
 sudo apt-get install python-software-properties software-properties-common -f
