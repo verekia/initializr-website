@@ -54,8 +54,45 @@ include $_SERVER['DOCUMENT_ROOT']."/include.php";
 	$FName = $_POST['FName']; // required
  
     $error_message = "";
+
+//Clean the name fields of any symbols, whitespace, or digits or error out
+  $name_exp = '/\W{1,}/';
+ if(preg_match($name_exp,$first_name)) {
+    $error_message .= "Name fields: Use letters.  No symbols or digits or whitespace.";
+}
+
+  
+ if(preg_match($name_exp,$last_name)) {
+    $error_message .= "Name fields: Use letters.  No symbols or digits or whitespace."; 
+    } 
+
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.([comcanetco.ukCOMCANETCO.UK]{2,3})$/';
+$string_exp = "/^[A-Za-z .'-]+$/";
+$amount_exp = '/[0-9]{1,6}/';
+
+//If the email address is not from a .com, .ca, .net, or a .co.uk domain, then generate this error
+  if(!preg_match($email_exp,$email_from)) {
  
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+//Clean the amount data
+  if(preg_match($string_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use letters.  No symbols or digits.  Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to FName.');
+  }
+
+  if(!preg_match($amount_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use digits!  No symbols or letters!  Value can only be 1 to 6 digits in length!';
+    $error_message .= 'Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to NXTamount.');
+  }
+  
  
   if(!preg_match($email_exp,$email_from)) {
  
