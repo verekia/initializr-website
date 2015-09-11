@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 #setup.sh was first authored on May 31, 2015 by Taylor Warden
 #This shell script will attempt to provide the following functionality:
 #Fetch the recently updated package list via apt-get and upgrade the system.
@@ -9,13 +9,15 @@ echo "NOTE:  If you would like to run this script and avoid any errors, refer to
 echo "Attempting to run sudo apt-get update && sudo apt-get upgrade, Ubuntu will now ask you for your sudo/root password.";
 echo "This script will now attempt to install Apache, MySQL, PHP5, webmin, and phpMyadmin";
 echo "IMPORTANT:  When you encounter the installation of phpMyadmin, Choose Apache and then YES for dbconfig-common.";
+#Update first
+echo "Attempting to run command sudo apt-get update, if Ubuntu asks you for your sudo/root password, please enter it.";
+sudo apt-get update && sudo apt-get upgrade
 echo "Attempting to run command sudo apt-get install python-software-properties -f, Ubuntu will now ask you for your sudo/root password.";
-sudo apt-get install python-software-properties -f
+#different package >=12.10: ref: software-properties-common https://bugs.launchpad.net/ubuntu/+source/ubuntu-meta/+bug/439566
+sudo apt-get install python-software-properties software-properties-common -f
 echo "Attempting to run command sudo add-apt-repository ppa:ondrej/php5-oldstable.";
 echo "Ubuntu will now as you to confirm, select YES and enter your password if prompted.";
 sudo add-apt-repository ppa:ondrej/php5-oldstable
-echo "Attempting to run command sudo apt-get update, if Ubuntu asks you for your sudo/root password, please enter it.";
-sudo apt-get update
 echo "Attempting to run command sudo apt-get install php5 php5-gd php5-mysql php5-curl php5-cli php5-cgi php5-dev php5-fpm -f";
 echo "If Ubuntu asks you for your sudo/root password, please enter it.";
 sudo apt-get install php5 php5-gd php5-mysql php5-curl php5-cli php5-cgi php5-dev php5-fpm -f
