@@ -1,6 +1,6 @@
 <?php
-$dbhost = 'localhost';
-$dbuser = 'qgk_user';
-$dbpass = 'pw12345';
-$dbname = 'qgk';
+$db_host = '';
+$db_user = '';
+$db_pass = '';
+$db_name = '';
 ?>
