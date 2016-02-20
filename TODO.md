@@ -1,5 +1,5 @@
 
-Create a front end statistics API for Roast Coins (see https://github.com/RoastBeefSandwichCo/Roast-Coins+
+Create a front end statistics API for Roast Coins, see https://github.com/RoastBeefSandwichCo/Roast-Coins
 
 GETs without variables, used to query the database about its current state for daily operation
 
