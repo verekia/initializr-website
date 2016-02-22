@@ -33,7 +33,7 @@ if(strlen($error_message) > 0) {
     died($error_message);
   }
   
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE finished = false";
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE crypto_symbol = ". $crypto_symbol . " AND WHERE external_address = ". $external .";";
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
 
