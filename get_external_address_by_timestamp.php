@@ -1,6 +1,11 @@
 <?php
+//Usage:  domain.tld/get_external_address_by_timestamp?external=external_address?timestamp=unix_timestamp
+//See http://www.unixtimestamp.com/ for a unix timestamp converter
+//I.E. 1456169529 [seconds since Jan 01 1970. (UTC)]
+//Translates to: 02/22/2016 @ 7:32pm (UTC)
+
 require_once 'config.php';
-$conn = mysql_connect($db_host,$db_user,$db_ pass)
+$conn = mysql_connect($db_host,$db_user,$db_pass)
 or die ('Error connecting to mysql!  Please check config.php and your database for any inconsistencies.');
 
 //SQL query executed returning an array
