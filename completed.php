@@ -7,7 +7,7 @@ or die ('Error connecting to mysql!  Please check config.php and your database f
 //Use a while loop to print each line by ID then append with the newline character
 //assign SQL to a variable for query execution
 
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE finished = true";
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE finished = true;";
 
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
