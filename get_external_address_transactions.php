@@ -8,10 +8,6 @@ or die ('Error connecting to mysql!  Please check config.php and your database f
 //Use a while loop to print each line by ID then append with the newline character
 //assign SQL to a variable for query execution
 
-//GET the crypto symbol and external ripple address
-
-$crypto_symbol = htmlspecialchars($_GET["cryptocode"])
-
 //GET external address
 
 $external = htmlspecialchars($_GET["external"])
