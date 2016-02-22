@@ -1,7 +1,7 @@
 <?php
 
 require_once 'config.php';
-$conn = mysql_connect($db_host,$db_user,$db_ pass)
+$conn = mysql_connect($db_host,$db_user,$db_pass)
 or die ('Error connecting to mysql!  Please check config.php and your database for any inconsistencies.');
 
 
@@ -9,7 +9,7 @@ or die ('Error connecting to mysql!  Please check config.php and your database f
 //Use a while loop to print each line by ID then append with the newline character
 
 //assign SQL to a variable for query execution
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index";
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index;";
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
 $result = $conn->query($sql);
