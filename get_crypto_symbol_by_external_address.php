@@ -1,7 +1,8 @@
 <?php
-
+//Usage: domain.tld/get_crypto_symbol_by_external_address.php?cryptocode=XYZ?external=external
+//Provides an audit of any specified cryptocurrency and exeternal address
 require_once 'config.php';
-$conn = mysql_connect($db_host,$db_user,$db_ pass)
+$conn = mysql_connect($db_host,$db_user,$db_pass)
 or die ('Error connecting to mysql!  Please check config.php and your database for any inconsistencies.');
 
 //SQL query executed returning an array
@@ -33,7 +34,7 @@ if(strlen($error_message) > 0) {
     died($error_message);
   }
   
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE crypto_symbol = ". $crypto_symbol . " AND WHERE external_address = ". $external .";";
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE crypto_symbol = ". $cryptocode . " AND WHERE external_address = ". $external .";";
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
 
