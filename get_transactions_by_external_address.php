@@ -1,5 +1,5 @@
 <?php
-//Usage: domain.tld/get_external_address_transactions.php?external=external_address
+//Usage: domain.tld/get_transactions_by_external_address.php?external=external_address
 //Provides an audit of all transactions for any specified external address
 
 require_once 'config.php';
