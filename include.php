@@ -30,7 +30,7 @@ $operatorEmail = "support@yourdomain.com "; // string value
 
 //Declare and instantiate the gatewayName variable, store default as Read the README.md file to Change This:
 
-$gatewayName = "QGK V1.0.6 Demo"; // string value
+$gatewayName = "QGK V1.0.7 Demo"; // string value
 
 //Declare and instantiate asset array with default BTC:
 
