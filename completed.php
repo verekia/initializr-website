@@ -1,6 +1,6 @@
 <?php
 require_once 'config.php';
-$conn = mysql_connect($db_host,$db_user,$db_ pass)
+$conn = mysql_connect($db_host,$db_user,$db_pass)
 or die ('Error connecting to mysql!  Please check config.php and your database for any inconsistencies.');
 
 //SQL query executed returning an array
