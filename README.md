@@ -21,11 +21,14 @@ QuickGatewayKit
         this web-kit releases.  QGK is being created for developers of services for the Ripple
         protocol in mind, however, a secondary focus is this web-kit should be easily modified
         to allow for a Cryptocurrency Exchange to be created, with QGK being used as a resource
-        for getting started.  The development team has chosen the HTML5coin wallet software as 
-        the  asset for the default deposit and withdrawal actions.  The reason or this decision
-        is that any source code forked from Bitcoin or Litecoin's code should include the same
-        or very similar processes for the scripts this web-kit provides to allow for a resource
-        as how to implement cryptocurrency deposits and withdrawals.
+        for getting started.  
+        
+        The development team of the QuickGatewayKit has joined forces with
+        RoastBeefSandwhichCo who is working in collaboration with the QGK to provide a back-end
+        service which will immediately replace gatewayd.  The repository will be able to optionally
+        support GWD once it has been fixed (read: overhauled) in the future.  The Roast Coins interface will
+        allow developers to automate inbound and outbound cryptocurrency settlement using the Ripple
+        Consensus Ledger or their own propriertary implementation. 
         
         Please do your own due diligence when developing a Ripple business, such as 
         a Gateway.  You must do your own research and contact relevent Government
@@ -51,6 +54,7 @@ QuickGatewayKit
         6.  You now have a Mock Gateway!  
         7.  Donations
         8.  Join the Ripple Community
+        9.  Consultation, Technical Writing, and more upon request
         
         The contents of this web-kit include the following:
         
@@ -66,14 +70,6 @@ QuickGatewayKit
         If you have problems with writing your terms, hire a lawyer or 
         consult twarden on the Official Ripple forums for the possibility of
 	consulting or further resources.
-        
-        irba.php:  The International Ripple Business Association (IRBA) is 
-        an organization in which member Gateways must abide by a strict 
-        business practices and disclosure agreements.  The IRBA verifies 
-        important information such as banking information.  This page includes
-        more information on the IRBA an a simple template.  It is highly suggested
-        if you are serious about operating a Gateway to one day apply for membership.
-        This page becomes more important as your Gateway project becomes more established.
         
         deposit.php:  the script that processes the asset offered by default on index.php.
         
@@ -112,10 +108,6 @@ QuickGatewayKit
 
 	Navigate to the QGK directory and run sh setup.sh.  This will update your system and install
 	software packages this webkit and your web server will require to operate.  
-	
-	Now run mysql_setup.sh by entering sh mysql_setup.sh qgk qgk_user PASSWORD 
-	
-	where PASSWORD is a secure password for this database user.
 
         Next, open index.php.  Read the document entirely an replace the lorem ipsum text with
         your business information.  When editing the form on this page, change XXXamount
@@ -152,13 +144,17 @@ QuickGatewayKit
         ydeposit.php links to yd.php
         ywithdraw.php links to yw.php
         
-        Change the password within config.php to the password you chose when running mysql_setup.sh
+	Follow the instructions found in the Roast Coins repository
+	https://github.com/RoastBeefSandwichCo/Roast-Coins
+	and be sure to edit config.php with your RC database
+	details for access to statistics of your Roast Coins installation provided in
+	rcindex.php.
         
         6.  You now have a Mock Gateway!  
         
-        Now is the time to advertise your site and start market making over Ripple.
-        The last step is to edit irba.php with the required information as outlined 
-        by ripplebusiness.org before applying for membership.
+        Now is the time to advertise your site and start market making over Ripple.  Now is the 
+        time to network with other developers, market makers, and marketers in the industry
+        to build your business!
         
         7.  Donations
         
@@ -171,3 +167,8 @@ QuickGatewayKit
        8.  Join the Ripple Community!
        
        Join us at the official Ripple forums!  https://forum.ripple.com/
+
+	9. Consultation, Technical Writing, and more available upon request
+	
+	If you or your business require consultation, technical writing, or require a block or ledgerchain solution,
+	please write to taylor at xagate dot com.

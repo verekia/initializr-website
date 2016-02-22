@@ -1,32 +1,22 @@
 <?php
+//Usage: domain.tld/get_transactions_by_external_address.php?external=external_address
+//Provides an audit of all transactions for any specified external address
 
-echo "<h1>Roast Coins API<br /></h1>";
-echo "<ul><li><a href="full_index.php">Full Index of all Transactions</a></li>";
-echo "<li><a href="pending.php">Pending Transactions</a></li>";
-echo "<li><a href="completed.php">Completed Transactions</a></li>";
-echo "<li>Get Transactions by External Address:<br /><li>get_transactions_by_external_address.php?external=EXTERNAL_ADDRESS</li></li>";
-echo "<li>Get Transactions by Crypto Code and External Address:<br /><li>get_crypto_symbol_by_external_address.php?cryptocode=XYZ?external=EXTERNAL_ADDRESS</li></li>";
-echo "<li>Get Transactions by Timestamp and External Address:<br /><li>get_external_address_by_timestamp.php?timestamp=UNIX_TIMESTAMP?external=EXTERNAL_ADDRESS</li></li>";
-echo "</ul><br />";
-
-/*Template for GETs
 require_once 'config.php';
 $conn = mysql_connect($db_host,$db_user,$db_pass)
 or die ('Error connecting to mysql!  Please check config.php and your database for any inconsistencies.');
 
 //SQL query executed returning an array
 //Use a while loop to print each line by ID then append with the newline character
-/*Template for GETS with variables
-//GET the var1 and var2
+//assign SQL to a variable for query execution
 
-$var1 = htmlspecialchars($_GET["var1"])
+//GET external address
 
-//GET var2
+$external = htmlspecialchars($_GET["external"])
 
-$var2 = htmlspecialchars($_GET["var2"])
 //Comment this below section an modify it to your liking if implementing your own custom external addresses
-//the regular expression for validating ripple addresses
 
+//the regular expression for validating ripple addresses
 $ripple_exp = '/^r[rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz]{27,35}$/';
 
 //validate the passed external address, first by maximum valid length then by regular expression
@@ -40,13 +30,11 @@ if(strlen($external) > 53) {
 if(strlen($error_message) > 0) {
     died($error_message);
   }
-  */
-  /*
-//assign SQL to a variable for query execution
-//Ensure to add WHERE keyword to below query, especially important when using GET variables!
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index;";
+  
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE external_address = ". $external .";";
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
+
 $result = $conn->query($sql);
 
 //if the returned array has data
@@ -61,6 +49,6 @@ if ($result->num_rows > 0) {
           //else there were no results, notify RC operator
     echo "0 results";
 }
+
 $conn->close();
-*/
 ?>
