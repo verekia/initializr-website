@@ -7,7 +7,7 @@ or die ('Error connecting to mysql!  Please check config.php and your database f
 //Use a while loop to print each line by ID then append with the newline character
 //assign SQL to a variable for query execution
 
-$sql = "SELECT id, crypto_symbol, crypto_address, external_address, direction,  timestamp, finished FROM coin_index WHERE finished = true;";
+$sql = "SELECT id, crypto_symbol, crypto_address, external_address, is_inbound,  rc_timestamp, finished, bc_blockhash, bc_amount, bc_txid FROM blockchain_transactions WHERE finished = 1 AND bc_txid IS NOT NULL;";
 
 //connect to the database, execute the $sql, store the returned array within $result
 //script exits gracefully if connection cannot be established
@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"]. " - Crypto Symbol: " . $row["crypto_symbol"]. " - Cryptocurrency Address: " . $row["crypto_address"].
 " - External Address: " . $row["external_address"].
- " - Time-stamp: " . $row["timestamp"]. " - Direction: " . $row["direction"]. " - Finished: " . $row["finished"]. "<br />";
+ " - Time-stamp: " . $row["rc_timestamp"]. " - Is Inbound: " . $row["is_inbound"]. " - Finished: " . $row["finished"]. " - Blockhash: ". $row["bc_blockhash"]. " Amount: " . $row["bc_txid"]. " TxID: " . $row["bc_txid"].  "<br />";
     }
 } else {
           //else there were no results, notify RC operator
