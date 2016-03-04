@@ -5,6 +5,8 @@ echo "<ul><li><a href="full_index.php">Full Index of all Transactions</a></li>";
 echo "<li><a href="pending.php">Pending Transactions</a></li>";
 echo "<li><a href="completed.php">Completed Transactions</a></li>";
 echo "<li>Get Transactions by External Address:<br /><li>get_transactions_by_external_address.php?external=EXTERNAL_ADDRESS</li></li>";
+echo "<li>Get Transactions by Transaction ID:<br /><li>get_transactions_by_txid.php?txid=BLOCKCHAIN_TRANSACTION_ID</li></li>";
+echo "<li>Get Transactions by Blockhash:<br /><li>get_transactions_by_blockhash.php?blockhash=BLOCKCHAIN_BLOCKHASH</li></li>";
 echo "<li>Get Transactions by Crypto Code and External Address:<br /><li>get_crypto_symbol_by_external_address.php?cryptocode=XYZ?external=EXTERNAL_ADDRESS</li></li>";
 echo "<li>Get Transactions by Timestamp and External Address:<br /><li>get_external_address_by_timestamp.php?timestamp=UNIX_TIMESTAMP?external=EXTERNAL_ADDRESS</li></li>";
 echo "</ul><br />";
