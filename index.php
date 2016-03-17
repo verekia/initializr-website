@@ -116,7 +116,7 @@
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -140,8 +140,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-        </div>
+			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php"; echo $headerText; ?>
+	</div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
@@ -152,7 +153,11 @@
         <h1>My big message to the world!</h1>
         <p>We have a major marketing statement here:
 		<ul><li>Here is the first supporting fact</li>
-		<ul><li>Here is the second one, I can copy and paste it below for more supporting facts</li>
+		<li>Here is the second one, I can copy and paste it below for more supporting facts</li>
+		<li><a href="https://xagate.com">XAGATE.com</a> the official QGK demonstration website</li>
+		<li>View our <a href="products.php">example Ripple web-store</a></li>
+		<li>View our <a href="fetch.php">Ripple statistics page</a></li>
+		<li>This site acts as a showcase for the different versions of the web-kit</li>
 		</li><li><b>This is the last important fact in bold</b></li></ul><br />
         <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
 		<div id="more" style="display: none">  <!-- A Learn More button displays more information to the user -->
@@ -257,10 +262,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         </div>
       </div>
       <hr>
-      <footer>
-        <p>&copy; <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
-        <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">QuickGatewayKit</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/whotooktwarden/QuickGatewayKit" property="cc:attributionName" rel="cc:attributionURL">Taylor Warden</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/verekia/initializr-website" rel="dct:source">https://github.com/verekia/initializr-website</a>.</p>
-      </footer>
+	<?php include "footer.php"; echo $footerText; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>

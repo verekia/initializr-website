@@ -57,17 +57,34 @@ if(isset($_POST['email'])) {
  
     $error_message = "";
  
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.([comcanetco.ukCOMCANETCO.UK]{2,3})$/';
+$string_exp = "/^[A-Za-z .'-]+$/";
+$amount_exp = '/[0-9]{1,6}/';
     
     $ripple_exp = '/^r[rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz]{27,35}$/';
  
+//If the email address is not from a .com, .ca, .net, or a .co.uk domain, then generate this error
   if(!preg_match($email_exp,$email_from)) {
  
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
  
   }
  
-    $string_exp = "/^[A-Za-z .'-]+$/";
+//Clean the amount data
+  if(preg_match($string_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use letters.  No symbols or digits.  Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to FName.');
+  }
+
+  if(!preg_match($amount_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use digits!  No symbols or letters!  Value can only be 1 to 6 digits in length!';
+    $error_message .= 'Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to NXTamount.');
+  }
 	
 	if(is_numeric($XXXamount) == false) {
  
@@ -255,7 +272,7 @@ $headers = 'From: '.$email_from."\r\n".
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -279,8 +296,9 @@ $headers = 'From: '.$email_from."\r\n".
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-        </div>
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php"; echo "$headerText"; ?>
+</div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
@@ -315,10 +333,7 @@ Return to <a href="index.php">homepage</a>.<br />
     
       </div>
       <hr>
-      <footer>
-        <p>&copy; <?php include $_SERVER['DOCUMENT_ROOT']."/include.php"; echo $gatewayName; ?> 20XX ~~~ Please read our <a href="/tos.php">Terms of Service</a>.</p>
-        <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">QuickGatewayKit</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/whotooktwarden/QuickGatewayKit" property="cc:attributionName" rel="cc:attributionURL">Taylor Warden</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/verekia/initializr-website" rel="dct:source">https://github.com/verekia/initializr-website</a>.</p>
-      </footer>
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>

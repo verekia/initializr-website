@@ -30,7 +30,7 @@ $operatorEmail = "support@yourdomain.com "; // string value
 
 //Declare and instantiate the gatewayName variable, store default as Read the README.md file to Change This:
 
-$gatewayName = "Read the README.md file to Change This"; // string value
+$gatewayName = "QGK V1.0.9 Demo"; // string value
 
 //Declare and instantiate asset array with default BTC:
 
@@ -71,9 +71,15 @@ $withdrawalDeliveryEstimate = array(); $withdrawalDeliveryEstimate['minHours'] =
 $withdrawalDeliveryEstimate['maxHours'] = 24; // int value
 $withdrawalDeliveryEstimate['asset'] = 'BTC'; // string value
 
-
-<?php
-
-}
-
+return $withdrawalDeliveryEstimate['maxHours'];
+return $withdrawalDeliveryEstimate['asset'];
+return $depositDeliveryEstimate['maxHours'];
+return $depositDeliveryEstimate['asset'];
+return $asset;
+return $transitFee;
+return $depositFee;
+return $withdrawalFee;
+return $operatorEmail;
+return $operatorName;
+return $gatewayName;
 ?>

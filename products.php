@@ -25,7 +25,7 @@
         RECEIVE LEGAL ACTION, DIRECTLY OR INDIRECTLY, FOR THE USAGE OF THIS OR ANY PORTION OF THESE DOCUMENTS, IN PART
         OR IN FULL.  YOU HAVE BEEN WARNED.
         
-       2. TABLE OF CONTENTS
+        2. TABLE OF CONTENTS
         
         1.  Preamble
         2.  Table of Contents
@@ -141,225 +141,43 @@
             <span class="icon-bar"></span>
           </button>
 			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php"; echo "$headerText"; ?> 
+			<?php include "header.php"; echo "$headerText"; ?>
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>My big message to the world!</h1>
-        <p>We have a major marketing statement here:
-		<ul><li>Here is the first supporting fact</li>
-		<ul><li>Here is the second one, I can copy and paste it below for more supporting facts</li>
-		</li><li><b>This is the last important fact in bold</b></li></ul><br />
-        <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
-		<div id="more" style="display: none">  <!-- A Learn More button displays more information to the user -->
-			<h2>What is Lorem Ipsum?</h2>
-			<p>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-			</p>
-			<h3>Why do we use it?</h3>
-			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-<br /><!-- Remove this line an below if you do not need a second paragraph -->
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-      </div>
-    </div>
-	<form name="withdrawalform" method="post" action="withdraw.php">
- 
-<table width="450px">
-	
-	<tr>
- <td valign="top">
- 
-  <label for="email">Email Address *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="email" maxlength="80" size="30">
- 
- </td>
- 
-</tr>
-						
-						<tr>
- 
- <td valign="top">
- 
-  <label for="first_name">First Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="first_name" maxlength="50" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="last_name">Last Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="last_name" maxleng0.
-									  0th="50" size="30">
- 
- </td>
- 
-</tr>
-															   <tr>
- 
- <td valign="top">
- 
-  <label for="telephone">Telephone Number *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="telephone" maxlength="16" size="15">
- 
- </td>
- 
-</tr>
- 
-							 <tr>
-							 
-							 <td valign="top">
- 
-  <label for="address">Full Address *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="address" maxlength="53" size="30">
- 
- </td>
- 
-</tr>
-															 <tr>
-							 
-							 <td valign="top">
- 
-  <label for="address">Postal Code *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="postalcode" maxlength="6" size="4">
- 
- </td>
- 
-</tr>
-															   
-															   <tr>
-							 
-							 <td valign="top">
- 
-  <label for="address">City *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="city" maxlength="30" size="12">
- 
- </td>
- 
-</tr>
-														  
-														  <tr>
-							 
-							 <td valign="top">
- 
-  <label for="address">Province *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="province" maxlength="16" size="12">
- 
- </td>
- 
-</tr>
-															  
-															  <tr>
-							 
-							 <td valign="top">
- 
-  <label for="address">Country *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="country" maxlength="24" size="20">
- 
- </td>
- 
-</tr>
-							 
- <tr>
-							 
-							 <td valign="top">
- 
-  <label for="XAGamount">XAG Amount*</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="XAGamount" maxlength="2" size="5">
- 
- </td>
- 
-</tr>
-							 
-<tr>
- 
- <td valign="top">
- 
-  <label for="comments">Comments</label>
-					   <p>Please include special delivery instructions (if any).</p>
- </td>
- 
- <td valign="top">
- 
-  <textarea  name="comments" maxlength="1500" cols="25" rows="6"></textarea>
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td colspan="2" style="text-align:center">
- 
-  <input type="submit" value="Submit">
- 
- </td>
- 
-</tr>
- 
-</table>
- 
-</form>
-	
-      </div>
+
+
+<table>
+<tr><td><h1>Widget 1</h1></td><td>Currency Code:  <strong>W00</strong></td><td> <?//Each of these are your product names and codes over Ripple?>
+</td><td>5$ CAD.XAGATE</td></tr><tr><td></td><td><img src="/img/00.png" /></td><?//This is the amount you are selling them for @ which Gateway?>
+<td>50 last issued July 1st:</td><?//The total amount on stock/last issued and when?>
+<td><a href="https://rippletrade.com/#/trust?to=rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH&amount=5%2FW00&name=WidgetsINC">Trust-link</a></td></tr><tr>
+<?//The trust link for this item over Ripple. ?>
+<td><a href="rw00.php">Redeem your IOU</a></td></tr></table><?//The link to the redemption/delivery request page?>
+
+<hr>
+
+<table>
+<tr><td><h1>Widget 2</h1></td><td>Currency Code:  <strong>W01</strong></td><td> <?//Each of these are your product names and codes over Ripple?>
+</td><td>1 BTC.SnapSwap</td></tr><tr><td></td><td><img src="/img/01.png" /></td><?//This is the amount you are selling them for @ which Gateway?>
+<td>500 last issued July 1st:</td><?//The total amount on stock/last issued and when?>
+<td><a href="https://rippletrade.com/#/trust?to=rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH&amount=5%2FW01&name=WidgetsINC">Trust-link</a></td></tr><tr>
+<?//The trust link for this item over Ripple.?>
+<td><a href="rw01.php">Redeem your IOU</a></td></tr></table><?//The link to the redemption/delivery request page?>
+
+<hr>
+
+<table>
+<tr><td><h1>Widget 3</h1></td><td>Currency Code:  <strong>W02</strong></td><td><?//Each of these are your product names and codes over Ripple?>
+</td><td>1$ CAD.XAGATE</td></tr><tr><td></td><td><img src="/img/02.png" /></td><?//This is the amount you are selling them for @ which Gateway?>
+<td>50,000 last issued July 1st:</td><?//The total amount on stock/last issued and when?>
+<td><a href="https://rippletrade.com/#/trust?to=rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH&amount=5%2FW02&name=WidgetsINC">Trust-link</a></td></tr><tr>
+<?//The trust link for this item over Ripple.?>
+<td><a href="rw02.php">Redeem your IOU</a></td></tr></table><?//The link to the redemption/delivery request page?>
+
+	</div>
       <hr>
 	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -391,7 +209,5 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
   });
 });
 				</script>
-    </body>
-</html>
     </body>
 </html>
