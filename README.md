@@ -129,6 +129,11 @@ QuickGatewayKit
 
 	footer.php will replicate the Terms of Service link, copyright notice, and license
 	across all pages.
+	
+	In the event you would prefer a single page site layout, copy the javascript and css from the
+	singlepage directory and use the onepage.php template in lieu of index.php and tpl.php.  Find and
+	replace asset1-assest3 for your default assets and follow the below instructions for further back-end
+	set-up.
 
         5.  Editing the Back-end
         
