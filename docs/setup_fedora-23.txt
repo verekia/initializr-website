@@ -1,0 +1,26 @@
+#A set of commands to install the LAMP stack on fedora 23
+#Batteries not included. This does not configure or even verify installations. Use as a guide, not a script.
+#Run these commands with sudo or as root.
+#WISHLIST: non-interactive version.
+#Tested on fedora 23 4.2.3-300.x86_64
+#Source: http://www.unixmen.com/how-to-install-lamp-stack-in-fedora-23/
+
+#Install Apache
+dnf install httpd -y
+systemctl enable httpd
+systemctl start httpd
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+
+#Install MariaDB
+dnf install mariadb mariadb-server -y
+systemctl enable mariadb
+systemctl start mariadb
+mysql_secure_installation
+
+#Install PHP and modules
+dnf install php -y
+systemctl restart httpd
+dnf install php-mysql -y
+systemctl restart httpd
