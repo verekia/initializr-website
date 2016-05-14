@@ -30,7 +30,7 @@ function fail(message) {
   api.connect().then(() => {
   api.on('error', (errorCode, errorMessage) => { console.log(errorCode + ': ' + errorMessage); });
   console.log('Connected...');
-  return api.getOrderbook(address, orderbook).then(ethorderbook => {
+  return api.getOrderbook(address, orderbook2).then(ethorderbook => {
   //console.log(orderbook);
   str = JSON.stringify(ethorderbook, null, 4); // (Optional) beautiful indented output.
   console.log(str); // Logs output to dev tools console.
