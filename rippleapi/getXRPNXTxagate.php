@@ -6,7 +6,7 @@
   <script>
  console.log(ripple);
 var api = new ripple.RippleAPI({server:'wss://xagate.com:48212'});
-//const address = 'rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH';
+const address = 'rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH';
 var orderbook3 = {
      "base": {
      "currency": "XRP",
