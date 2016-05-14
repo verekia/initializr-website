@@ -161,7 +161,27 @@ echo "One Bitcoin (BTC) is <b>$BTCCAD</b> in Canadian Dollars.<hr>";
 
 //END QUANDL STATS
 
+//BEGIN ORDERBOOK STATS
 
+echo '<a href="https://xagate.com/rippleapi/getXRPBTCxagate.php">XRP/BTC.~Xagate</a> Order-Book<br />';
+echo '<a href="https://xagate.com/rippleapi/getXRPLTCxagate.php">XRP/LTC.~Xagate</a> Order-Book<br />';
+echo '<a href="https://xagate.com/rippleapi/getXRPNXTxagate.php">XRP/NXT.~Xagate</a> Order-Book<br />';
+echo '<a href="https://xagate.com/rippleapi/getXRPETHxagate.php">XRP/ETH.~Xagate</a> Order-Book<br />';
+echo '<a href="https://xagate.com/rippleapi/getXRPCADrippleunion.php">XRP/CAD.~Rippleunion</a> Order-Book<br />';
+echo '<a href="https://xagate.com/rippleapi/getCADrippleunionBTCxagate.php">CAD.~RippleUnion/BTC.~Xagate</a> Order-Book';
+
+/* 
+Uncaught error rippleapi; something about concurrent websocket connections to the rippled server and the promise object
+Probably shouldn't load these concurrently...Offer hyperlinks
+include "./rippleapi/getXRPBTCxagate.php";
+include "./rippleapi/getXRPLTCxagate.php";
+include "./rippleapi/getXRPNXTxagate.php";
+include "./rippleapi/getXRPETHxagate.php";
+include "./rippleapi/getXRPCADrippleunion.php";
+include "./rippleapi/getCADrippleunionBTCxagate.php";
+*/
+
+/*DEPRECATED RIPPLE-REST CODE
 $getXagateBTCOrders = '<a href="https://xagate.com:5990/v1/accounts/rKYNhsT3aLymkGH7WL7ZUHkm6RE27iuM4C/order_book/XRP/BTC+rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH">XRP/BTC.~Xagate</a>';
 $BTCOrdersArray = file_get_contents($getXagateBTCOrders);
 $BTCOrdersJson = json_encode($BTCOrdersArray);
@@ -259,6 +279,7 @@ $BTCBTCOrdersJson = json_encode($BTCOrdersArray);
 echo "This example is the ~SnapSwap/~Bitstamp order book for $getBTCSSBTCBSOrders <br />";
 //echo $BTCOrdersJson;
 //echo $BTCOrdersArray;
+*/
 
 //BEGIN AUDIT
 echo "<hr>These statistics were provided by the following endpoints:<br />";
@@ -272,6 +293,7 @@ echo '<a href="https://www.quandl.com/data/LPPM/PLAT-Platinum-Fixing">London Pla
 echo '<a href="https://www.quandl.com/data/MWORTH/10_3-Gold-Silver-Price-Ratio">MeasuringWorth</a><br />';
 echo '<a href="https://www.quandl.com/data/PERTH/PALL_USD_D-Palladium-Prices-USD-Daily">Perth Mint</a><br />';
 echo '<a href="https://www.quandl.com/data/BCHARTS/VIRTEXCAD-Bitcoin-Markets-virtexCAD">Bitcoin Charts Exchange Rate Data (virtexCAD)</a><br />';
-echo '<a href="https://ripple.com/build/ripple-rest/#get-order-book">ripple-REST: Get Order Book</a><hr>';
+//echo '<a href="https://ripple.com/build/ripple-rest/#get-order-book">ripple-REST: Get Order Book</a><hr>';
+echo '<a href="https://ripple.com/build/rippleapi/#getorderbook">RippleAPI: Get Order-Book</a><hr>';
 echo "<b><em>This data product is provided as-is, and QGK makes no warranty, either express or implied, including but not limited to, warranties of merchantability and fitness for a particular purpose. In no event will QGK be liable for any direct, special, indirect, consequential or other damages, however caused.</b></em>";
 ?>
