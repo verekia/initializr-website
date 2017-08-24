@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         
-        <!-- README  
+         <!-- README
         1.  Preamble
         QuickGatewayKit was produced in most part with Initializr.
         Many thanks and praise for http://www.initializr.com/ and Jonathan Verrecchia
@@ -111,11 +111,12 @@
        8.  Join the Ripple Community 
        
        Join us at the official Ripple forums!  https://forum.ripple.com/
+
         -->
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include "include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -139,9 +140,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php"; echo $headerText; ?>
-	</div>
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php"; echo "$headerText"; ?> 
+</div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
@@ -152,11 +153,7 @@
         <h1>My big message to the world!</h1>
         <p>We have a major marketing statement here:
 		<ul><li>Here is the first supporting fact</li>
-		<li>Here is the second one, I can copy and paste it below for more supporting facts</li>
-		<li><a href="https://xagate.com">XAGATE.com</a> the official QGK demonstration website</li>
-		<li>View our <a href="products.php">example Ripple web-store</a></li>
-		<li>View our <a href="fetch.php">Ripple statistics page</a></li>
-		<li>This site acts as a showcase for the different versions of the web-kit</li>
+		<ul><li>Here is the second one, I can copy and paste it below for more supporting facts</li>
 		</li><li><b>This is the last important fact in bold</b></li></ul><br />
         <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
 		<div id="more" style="display: none">  <!-- A Learn More button displays more information to the user -->
@@ -261,7 +258,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         </div>
       </div>
       <hr>
-	<?php include "footer.php"; echo $footerText; ?>
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -279,6 +276,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
     // Animation complete.
   });
 });
+
 			$(  "#viewThirdDetails").click(function() {
   $( getElementById = thirdDetails ).show( "slow", function() {
     // Animation complete.

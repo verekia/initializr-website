@@ -1,8 +1,178 @@
+<?php
+
+require_once 'config.php';
+        $conn = mysql_connect($dbhost,$dbuser,$dbpass)
+                or die ('Error connecting to mysql');
+
+if(isset($_POST['email'])) {
+ 
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+    //Find+replace XXX Amount and XXXamount to the asset code
+include $_SERVER['DOCUMENT_ROOT']."/include.php";
+    $email_to = $operatorEmail;
+ 
+    $email_subject = "DEFAULT WITHDRAWAL";
+ 
+    function died($error) {
+ 
+        // your error code can go here
+ 
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+ 
+        echo "These errors appear below.<br /><br />";
+ 
+        echo $error."<br /><br />";
+ 
+        echo "Please go back and fix these errors.<br /><br />";
+ 
+        die();
+ 
+    }
+ 
+    // validation expected data exists
+ 
+    if(
+ 
+        !isset($_POST['email']) ||
+        
+        !isset($_POST['FName']) ||
+		
+		!isset($_POST['XXXamount']))
+ 
+        //!isset($_POST['comments']))
+      
+     {
+ 
+        died('We are sorry, but there appears to be a problem with the form you submitted.');
+ 
+     }
+    
+    $email_from = $_POST['email']; // required
+ 
+    $XXXamount = $_POST['XXXamount'];
+	
+	$FName = $_POST['FName']; // required
+ 
+    $error_message = "";
+ 
+//Clean the name fields of any symbols, whitespace, or digits or error out
+  $name_exp = '/\W{1,}/';
+ if(preg_match($name_exp,$first_name)) {
+    $error_message .= "Name fields: Use letters.  No symbols or digits or whitespace.";
+}
+
+  
+ if(preg_match($name_exp,$last_name)) {
+    $error_message .= "Name fields: Use letters.  No symbols or digits or whitespace."; 
+    }
+
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.([comcanetco.ukCOMCANETCO.UK]{2,3})$/';
+$string_exp = "/^[A-Za-z .'-]+$/";
+$amount_exp = '/[0-9]{1,6}/';
+
+//If the email address is not from a .com, .ca, .net, or a .co.uk domain, then generate this error
+  if(!preg_match($email_exp,$email_from)) {
+ 
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+//Clean the amount data
+  if(preg_match($string_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use letters.  No symbols or digits.  Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to FName.');
+  }
+
+  if(!preg_match($amount_exp,$XXXamount)) {
+    $httpFowarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteAddress = $_SERVER['REMOTE_ADDR'];
+    $error_message .= 'Use digits!  No symbols or letters!  Value can only be 1 to 6 digits in length!';
+    $error_message .= 'Logging your IP address now: <br />'.$remoteAddress.' + '.$httpForwarded.'  ';
+    //die('$remoteAddress and $httpForwarded captured due to bad data inputted to NXTamount.');
+  }
+  
+
+ 
+  if(!preg_match($email_exp,$email_from)) {
+ 
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+	
+	if(is_numeric($XXXamount) == false) {
+ 
+    $error_message .= 'The amount you entered does not appear to be valid.<br />';
+ 
+  }
+  
+  if(is_numeric($FName) == true) {
+	$error_message .= 'The Full Name you entered does not appear to be valid.<br />';
+  }
+  
+  if(strlen($FName) == 0 || strlen($FName) >= 45) {
+  $error_message .= 'The Full Name you entered does not appear to be valid.<br />';
+  }
+	
+	if($XXXamount < 0.001) {
+ 
+    $error_message .= 'The amount you entered does not appear to be valid.  Must be greater than 0.001BTC. <br />';
+ 
+  }
+	
+	//$serviceFee = 0.0025;
+	
+	//$totalBTC = $XXXamount  - $serviceFee;
+	
+ 
+  if(strlen($error_message) > 0) {
+ 
+    died($error_message);
+ 
+  }
+ 
+    $email_message = "Form details below.\n\n";
+ 
+    function clean_string($string) {
+ 
+      $bad = array("content-type","bcc:","to:","cc:","href");
+ 
+      return str_replace($bad,"",$string);
+ 
+    }
+	
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+ 
+    $email_message .= "FName: ".clean_string($FName)."\n";
+	
+	$email_message .= "XXX Amount: ".clean_string($XXXamount)."\n";
+	
+	//$email_message .= "Service Fee: ".clean_string($serviceFee)."\n";
+	
+	//$email_message .= "Total: ".clean_string($totalBTC)."\n";
+  
+// create email headers
+ 
+$headers = 'From: '.$email_from."\r\n".
+ 
+'Reply-To: '.$email_from."\r\n" .
+ 
+'X-Mailer: PHP/' . phpversion();
+ 
+@mail($email_to, $email_subject, $email_message, $headers);
+ 
+?>
+<!-- include your own success html here -->
+ 
+<!-- include your own success html here -->
+ 
 <!DOCTYPE html>
 <html class="no-js">
     <head>
         
-        <!-- README  
+         <!-- README
         1.  Preamble
         QuickGatewayKit was produced in most part with Initializr.
         Many thanks and praise for http://www.initializr.com/ and Jonathan Verrecchia
@@ -111,11 +281,12 @@
        8.  Join the Ripple Community 
        
        Join us at the official Ripple forums!  https://forum.ripple.com/
+
         -->
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include "include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -139,9 +310,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php"; echo $headerText; ?>
-	</div>
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php"; echo "$headerText"; ?>
+        </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
@@ -152,11 +323,7 @@
         <h1>My big message to the world!</h1>
         <p>We have a major marketing statement here:
 		<ul><li>Here is the first supporting fact</li>
-		<li>Here is the second one, I can copy and paste it below for more supporting facts</li>
-		<li><a href="https://xagate.com">XAGATE.com</a> the official QGK demonstration website</li>
-		<li>View our <a href="products.php">example Ripple web-store</a></li>
-		<li>View our <a href="fetch.php">Ripple statistics page</a></li>
-		<li>This site acts as a showcase for the different versions of the web-kit</li>
+		<ul><li>Here is the second one, I can copy and paste it below for more supporting facts</li>
 		</li><li><b>This is the last important fact in bold</b></li></ul><br />
         <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
 		<div id="more" style="display: none">  <!-- A Learn More button displays more information to the user -->
@@ -171,124 +338,32 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
       </div>
     </div>
     <div class="container">
-          <h2>Default Gateway Asset</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		</p><p>Service Fee:  this amount of this asset</p>
-		<!--	<p><button id="viewFirstDetails">View Details</button></p> REMOVE FOR A VIEW DETAILS BUTTON-->
-			<div id="firstDetails"> <!--<div id="firstDetails" style="display: none">  if using button-->
-					 <p>
-						 <form name="depositform" method="post" action="deposit.php">
-<table width="450px">
- <tr><td valign="top">
-  <label for="email">Email Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="email" maxlength="80" size="30">
- </td>
-</tr>
-							 <tr>
-			 <td valign="top">
-  <label for="ripple">Ripple Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="ripple" maxlength="53" size="40">
- </td>
-</tr>
- <tr>
-							 <td valign="top">
-  <label for="XXXamount">XXX Amount*</label>
- </td>
- <td valign="top">
-  <input  type="text" name="XXXamount" maxlength="2" size="5">
- </td>
-</tr>
-<tr>
- <td colspan="2" style="text-align:center">
-  <input type="submit" value="Submit">
- </td>
-</tr>
-</table>
-</form>
-				<p>Withdrawals:</p>
-				<ul><li>This is the first withdrawal point of the withdrawal process</li>
-				<li>Remember this second point, it could be important!
-				</li>
-				<li>Service Fee:  this amount of this asset</li>
-				<li><a href="withdrawals.php"><em>Withdrawals</em></a></li>
-				</ul>
-				</p>
-					 </div>
-        </div>
-        <div class="container">
-          <h2>Second Option</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		<p>Service Fee:  this amount of this asset</p>
-          
-         <p>This is an important time to include your Gateway's Ripple Address for the user.  An example of a Ripple Address is <b><em>rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH</b></em>, make sure you replace this with yours!</p>
-		</p><p><b>IMPORTANT:</b>  If you would like to act as a rippler, please enable Rippling.  If you do not want your IOU balances to fluctuate with other gateways you trust <em>of the same currency code</em>, then disable the Rippling option when you trust our Gateway.</p>
-		</p><p>Service Fees:  this much of that asset on deposit.</p>
-		<p><b>Withdrawals</b></p>
-		 <p>Withdrawals incur this service fee.</p>
-		  <!-- <p><button id="viewSecondDetails">View Details</button></p> button for displaying details in following tag-->
-			<div id="secondDetails"> <!--<div id="secondDetails" style="display: none"> if using button-->
-					 <p>
-				<p><a href="xdeposit.php">Deposits</a> ~~~ <a href="xwithdraw.php">Withdrawls</a></p>
-				</p>
-					 </div>
-       </div>
-	    <div class="container">
-          <h2>Third Option</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		</p><p>Service Fees:  this much of that asset on deposit.</p>
-		<p><b>Withdrawals</b></p>
-		 <p>Withdrawals incur this service fee.</p>
-          <!-- <p><button id="viewThirdDetails">View Details</button></p> uncomment if using button for below tag-->
-			<div id="thirdDetails"> <!-- <div id="thirdDetails" style="display: none"> replace if using button above-->
-					 <p>
-						 <p><a href="ydeposit.php">Deposit</a> ~~~ <a href="ywithdraw.php">Withdraw</a></p>
-				</p>
-					 </div>
-       </div>
-        <div class="container">
-          <h2>Planned Features</h2>
-          <ul>
-			<li>This will happen!</li>
-		  <li>So will this cool thing!  I can copy more of this line if more are needed and paste it below.</li>
-				</ul>
-        </div>
-      </div>
-      <hr>
-	<?php include "footer.php"; echo $footerText; ?>
+
+    
+ 
+Thank you for contacting us. We will be mailing instructions for your transaction to the provided email address.<br /><br />
+
+Return to <a href="index.php">the index</a>.<br />
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
         <script src="js/vendor/bootstrap.min.js"></script>
-         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
         <script src="js/main.js"></script>
-		<script>
-			$(  "#viewFirstDetails").click(function() {
-  $( getElementById = firstDetails ).show( "slow", function() {
-    // Animation complete.
-  });
-});
-			$(  "#viewSecondDetails").click(function() {
-  $( getElementById = secondDetails ).show( "slow", function() {
-    // Animation complete.
-  });
-});
-			$(  "#viewThirdDetails").click(function() {
-  $( getElementById = thirdDetails ).show( "slow", function() {
-    // Animation complete.
-  });
-});
-			$(  "#learnMore").click(function() {
+								
+								<script>
+								$(  "#learnMore").click(function() {
+				
   $( getElementById = more ).show( "slow", function() {
     // Animation complete.
   });
-});
-				</script>
+});</script>
     </body>
 </html>
+
+<?php
+ 
+}
+ 
+?>

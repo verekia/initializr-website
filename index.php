@@ -111,6 +111,7 @@
        8.  Join the Ripple Community 
        
        Join us at the official Ripple forums!  https://forum.ripple.com/
+
         -->
         
         <meta charset="utf-8">
@@ -279,6 +280,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
     // Animation complete.
   });
 });
+
 			$(  "#viewThirdDetails").click(function() {
   $( getElementById = thirdDetails ).show( "slow", function() {
     // Animation complete.

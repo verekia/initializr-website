@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         
-        <!-- README  
+         <!-- README
         1.  Preamble
         QuickGatewayKit was produced in most part with Initializr.
         Many thanks and praise for http://www.initializr.com/ and Jonathan Verrecchia
@@ -25,7 +25,7 @@
         RECEIVE LEGAL ACTION, DIRECTLY OR INDIRECTLY, FOR THE USAGE OF THIS OR ANY PORTION OF THESE DOCUMENTS, IN PART
         OR IN FULL.  YOU HAVE BEEN WARNED.
         
-        2. TABLE OF CONTENTS
+       2. TABLE OF CONTENTS
         
         1.  Preamble
         2.  Table of Contents
@@ -111,11 +111,12 @@
        8.  Join the Ripple Community 
        
        Join us at the official Ripple forums!  https://forum.ripple.com/
+
         -->
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php include "include.php"; echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
+        <title><?php include "include.php";  echo $gatewayName; ?></title> <!-- THE TITLE OF THIS PAGE-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -139,9 +140,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			<a class="navbar-brand" href="index.php"><?php include "include.php"; echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
-			<?php include "header.php"; echo $headerText; ?>
-	</div>
+			<a class="navbar-brand" href="index.php"><?php include "include.php";  echo $gatewayName; ?></a><!-- YOUR HOMEPAGE LINK-->
+			<?php include "header.php"; echo "$headerText"; ?> 
+        </div>
         <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
       </div>
@@ -152,11 +153,7 @@
         <h1>My big message to the world!</h1>
         <p>We have a major marketing statement here:
 		<ul><li>Here is the first supporting fact</li>
-		<li>Here is the second one, I can copy and paste it below for more supporting facts</li>
-		<li><a href="https://xagate.com">XAGATE.com</a> the official QGK demonstration website</li>
-		<li>View our <a href="products.php">example Ripple web-store</a></li>
-		<li>View our <a href="fetch.php">Ripple statistics page</a></li>
-		<li>This site acts as a showcase for the different versions of the web-kit</li>
+		<ul><li>Here is the second one, I can copy and paste it below for more supporting facts</li>
 		</li><li><b>This is the last important fact in bold</b></li></ul><br />
         <p><a class="btn btn-primary btn-lg" role="button" id="learnMore">Learn more &raquo;</a></p><br />
 		<div id="more" style="display: none">  <!-- A Learn More button displays more information to the user -->
@@ -170,98 +167,201 @@
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
       </div>
     </div>
-    <div class="container">
-          <h2>Default Gateway Asset</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		</p><p>Service Fee:  this amount of this asset</p>
-		<!--	<p><button id="viewFirstDetails">View Details</button></p> REMOVE FOR A VIEW DETAILS BUTTON-->
-			<div id="firstDetails"> <!--<div id="firstDetails" style="display: none">  if using button-->
-					 <p>
-						 <form name="depositform" method="post" action="deposit.php">
+	<form name="withdrawalform" method="post" action="withdraw.php">
+ 
 <table width="450px">
- <tr><td valign="top">
+	
+	<tr>
+ <td valign="top">
+ 
   <label for="email">Email Address *</label>
+ 
  </td>
+ 
  <td valign="top">
+ 
   <input  type="text" name="email" maxlength="80" size="30">
+ 
  </td>
+ 
 </tr>
-							 <tr>
-			 <td valign="top">
-  <label for="ripple">Ripple Address *</label>
- </td>
+						
+						<tr>
+ 
  <td valign="top">
-  <input  type="text" name="ripple" maxlength="53" size="40">
+ 
+  <label for="first_name">First Name *</label>
+ 
  </td>
-</tr>
- <tr>
-							 <td valign="top">
-  <label for="XXXamount">XXX Amount*</label>
- </td>
+ 
  <td valign="top">
-  <input  type="text" name="XXXamount" maxlength="2" size="5">
+ 
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ 
  </td>
+ 
 </tr>
+ 
 <tr>
- <td colspan="2" style="text-align:center">
-  <input type="submit" value="Submit">
+ 
+ <td valign="top">
+ 
+  <label for="last_name">Last Name *</label>
+ 
  </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="last_name" maxleng0.
+									  0th="50" size="30">
+ 
+ </td>
+ 
 </tr>
+															   <tr>
+ 
+ <td valign="top">
+ 
+  <label for="telephone">Telephone Number *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="telephone" maxlength="16" size="15">
+ 
+ </td>
+ 
+</tr>
+ 
+							 <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="address">Full Address *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="address" maxlength="53" size="30">
+ 
+ </td>
+ 
+</tr>
+															 <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="address">Postal Code *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="postalcode" maxlength="6" size="4">
+ 
+ </td>
+ 
+</tr>
+															   
+															   <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="address">City *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="city" maxlength="30" size="12">
+ 
+ </td>
+ 
+</tr>
+														  
+														  <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="address">Province *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="province" maxlength="16" size="12">
+ 
+ </td>
+ 
+</tr>
+															  
+															  <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="address">Country *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="country" maxlength="24" size="20">
+ 
+ </td>
+ 
+</tr>
+							 
+ <tr>
+							 
+							 <td valign="top">
+ 
+  <label for="XAGamount">XAG Amount*</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="XAGamount" maxlength="2" size="5">
+ 
+ </td>
+ 
+</tr>
+							 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="comments">Comments</label>
+					   <p>Please include special delivery instructions (if any).</p>
+ </td>
+ 
+ <td valign="top">
+ 
+  <textarea  name="comments" maxlength="1500" cols="25" rows="6"></textarea>
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td colspan="2" style="text-align:center">
+ 
+  <input type="submit" value="Submit">
+ 
+ </td>
+ 
+</tr>
+ 
 </table>
+ 
 </form>
-				<p>Withdrawals:</p>
-				<ul><li>This is the first withdrawal point of the withdrawal process</li>
-				<li>Remember this second point, it could be important!
-				</li>
-				<li>Service Fee:  this amount of this asset</li>
-				<li><a href="withdrawals.php"><em>Withdrawals</em></a></li>
-				</ul>
-				</p>
-					 </div>
-        </div>
-        <div class="container">
-          <h2>Second Option</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		<p>Service Fee:  this amount of this asset</p>
-          
-         <p>This is an important time to include your Gateway's Ripple Address for the user.  An example of a Ripple Address is <b><em>rGgS5Hw3PhSp3VNT43PDTXze9YfdthHUH</b></em>, make sure you replace this with yours!</p>
-		</p><p><b>IMPORTANT:</b>  If you would like to act as a rippler, please enable Rippling.  If you do not want your IOU balances to fluctuate with other gateways you trust <em>of the same currency code</em>, then disable the Rippling option when you trust our Gateway.</p>
-		</p><p>Service Fees:  this much of that asset on deposit.</p>
-		<p><b>Withdrawals</b></p>
-		 <p>Withdrawals incur this service fee.</p>
-		  <!-- <p><button id="viewSecondDetails">View Details</button></p> button for displaying details in following tag-->
-			<div id="secondDetails"> <!--<div id="secondDetails" style="display: none"> if using button-->
-					 <p>
-				<p><a href="xdeposit.php">Deposits</a> ~~~ <a href="xwithdraw.php">Withdrawls</a></p>
-				</p>
-					 </div>
-       </div>
-	    <div class="container">
-          <h2>Third Option</h2>
-          <p>This is information about what asset I accept deposits for.</p>
-		  <p>This is the minimum deposit that I will accept.</p>
-		</p><p>Service Fees:  this much of that asset on deposit.</p>
-		<p><b>Withdrawals</b></p>
-		 <p>Withdrawals incur this service fee.</p>
-          <!-- <p><button id="viewThirdDetails">View Details</button></p> uncomment if using button for below tag-->
-			<div id="thirdDetails"> <!-- <div id="thirdDetails" style="display: none"> replace if using button above-->
-					 <p>
-						 <p><a href="ydeposit.php">Deposit</a> ~~~ <a href="ywithdraw.php">Withdraw</a></p>
-				</p>
-					 </div>
-       </div>
-        <div class="container">
-          <h2>Planned Features</h2>
-          <ul>
-			<li>This will happen!</li>
-		  <li>So will this cool thing!  I can copy more of this line if more are needed and paste it below.</li>
-				</ul>
-        </div>
+	
       </div>
       <hr>
-	<?php include "footer.php"; echo $footerText; ?>
+	<?php include "footer.php"; echo "$footerText"; ?>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -279,6 +379,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
     // Animation complete.
   });
 });
+
 			$(  "#viewThirdDetails").click(function() {
   $( getElementById = thirdDetails ).show( "slow", function() {
     // Animation complete.
@@ -290,5 +391,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
   });
 });
 				</script>
+    </body>
+</html>
     </body>
 </html>
