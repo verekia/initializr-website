@@ -1,2 +1,6 @@
-# initializr-website
-Initializr Home Page
+# The initializr-website
+# -----------------------
+
+# About the project:-
+
+# Features of the project:-
