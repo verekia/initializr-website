@@ -8,6 +8,4 @@ RUN bun i
 
 COPY . .
 
-RUN bun run build
-
 CMD ["bun", "start"]
