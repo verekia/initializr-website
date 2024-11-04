@@ -1,6 +1,6 @@
 {
   "name": "initializr-website",
-  "module": "index.ts",
+  "private": true,
   "type": "module",
   "scripts": {
     "start": "serve -p 3000"
