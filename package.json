@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "serve -p 3000"
+    "start": "serve"
   },
   "dependencies": {
     "serve": "14.2.4"
