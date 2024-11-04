@@ -1,0 +1,11 @@
+{
+  "name": "initializr-website",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "serve": "14.2.4"
+  }
+}

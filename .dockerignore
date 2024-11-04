@@ -1,0 +1,11 @@
+.next
+node_modules
+out
+
+.git
+.gitignore
+
+.github
+.vscode
+
+.env.local
