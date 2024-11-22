@@ -1,4 +1,4 @@
-FROM oven/bun:1.1.34-alpine
+FROM oven/bun:1.1.36-alpine
 
 WORKDIR /app
 
