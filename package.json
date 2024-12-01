@@ -3,9 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "serve"
+    "start": "serve public",
+    "prepare": "husky"
   },
   "dependencies": {
     "serve": "14.2.4"
+  },
+  "devDependencies": {
+    "husky": "9.1.7"
   }
 }
